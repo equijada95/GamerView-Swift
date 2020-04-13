@@ -8,16 +8,28 @@
 
 import UIKit
 import Kingfisher
+import KingfisherSwiftUI
 
 class Image: UIImageView
 {
-    let imageView: UIImageView? = UIImageView()
+    var imageView: UIImageView = UIImageView()
     
     func getImage(urlString: String) -> UIImageView
     {
-        
         let url = URL(string: urlString)
-        imageView?.kf.setImage(with: url)
-        return imageView!
+        imageView.kf.setImage(with: url)
+        {
+            result in
+            switch result {
+            case .success(let value):
+                print("Task done for: \(value.source.url?.absoluteString ?? "")")
+            case .failure(let error):
+                print("Job failed: \(error.localizedDescription)")
+            }
+        }
+        return imageView
+
+       // KFImage(URL(string: "https://example.com/image.png")!)
+        
     }
 }

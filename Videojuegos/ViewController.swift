@@ -30,7 +30,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 items in
                     
                 self.items = items
-              //  print(self.items)
                
                 self.performSegue(withIdentifier: "push", sender: self)
             })
@@ -44,10 +43,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if let tVC = segue.destination as? TableViewController
         {
             tVC.videogames = self.items
-            
-            
         }
     }
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         return campo.resignFirstResponder()
