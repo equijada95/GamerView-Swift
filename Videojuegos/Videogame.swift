@@ -14,6 +14,7 @@ struct Videogame : Codable
     var platforms: [Platforms]
     var stores: [Stores]?
     var rating: Double
+    var clip: Clip?
         
     enum CodingKeys : String, CodingKey{
         case id = "id"
@@ -22,6 +23,7 @@ struct Videogame : Codable
         case platforms = "platforms"
         case stores = "stores"
         case rating = "rating"
+        case clip = "clip"
         }
 
 }

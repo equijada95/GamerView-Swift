@@ -8,6 +8,8 @@
 
 import UIKit
 import Kingfisher
+import AVFoundation
+import AVKit
 
 class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, YourCellDelegate
 {
@@ -17,17 +19,10 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var image = Image()
     var imageVideogame : UIImageView? = UIImageView()
     var platforms: [Platforms] = []
+    var urlVideo : String = ""
+    var playerViewController = AVPlayerViewController()
     
     
-    
-
-  //  func getCurrentCellIndexPath(_ sender: UIButton) -> IndexPath? {
-  //      let buttonPosition = sender.convert(CGPoint.zero, to: tableView)
-  //      if let indexPath: IndexPath = tableView.indexPathForRow(at: buttonPosition) {
-  //          return indexPath
-  //      }
-  //      return nil
-  //  }
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -42,16 +37,6 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
          
             cell.imageVideogame.image = image.getImage(urlString: url!).image
            }
-        //    let hCell = tableView.dequeueReusableCell(withIdentifier: "platformViewCell", for: indexPath) as! HiddenCell
-        //
-        //    hCell.name.text = videogames[indexPath.row].platforms[indexPath.row].platform.name
-            
-          //  cell.cellDelegate = self
-          //  cell.dropDownButton.tag = indexPath.row
-            
-           // cell.platformTableview.isHidden = true
-            
-           // var platformTableView : UITableView = UITableView()
             
             cell.cellDelegate = self
             
@@ -66,33 +51,16 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if let hTable = segue.destination as? HiddenTable
-    {
-        hTable.platforms = platforms
+        if let hTable = segue.destination as? HiddenTable
+        {
+            hTable.platforms = platforms
+        }
     }
-    
     // MARK: UITableViewDataSource methods
     
     
-   // func numberOfSections(in tableView: UITableView) -> Int {
-   //     return 3
-   // }
     
-    
-   // func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-   //  //   if tableView == videogameTable{
-   //         return videogames.count
-   //  //   }
-   //  //   if tableView == platformTable{
-   //  //       return videogames[section].platforms.count
-   //  //   }else{
-   //  //       return 0
-   //  //   }
-   //
-   // }
-    
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> Videogame? {
+    private func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> Videogame? {
         return videogames[section]
     }
     
@@ -102,17 +70,35 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         print(videogames[indexPath.section])//[indexPath.row])
     }
     
-}
+
     
-    func didTapButton (cell: MyCustomCell){//(_ sender: UIButton) {
-       // if let indexPath = getCurrentCellIndexPath(sender) {
-        if let indexPath = cell.getIndexPath(){//tableView.indexPathForCell(cell) {
+    func didTapButton (cell: MyCustomCell){
+        if let indexPath = cell.getIndexPath(){
             platforms = videogames[indexPath.row].platforms
             
             self.performSegue(withIdentifier: "platforms", sender: self)
         }
+    }
         
+    func playVideo (cell: MyCustomCell)
+    {
+        if let indexPath = cell.getIndexPath()
+        {
+            if videogames[indexPath.row].clip?.clip != nil {
+                urlVideo = videogames[indexPath.row].clip!.clip
+            
+                let videoURL = URL(string: urlVideo)
+                let player = AVPlayer(url: videoURL!)
+                playerViewController.player = player
+                
+                self.present(playerViewController, animated: true, completion: nil)
+            }
+            else {
+                let alertview = UIAlertController(title:"Trailer not found",message:"Sorry but no trailer found for this video game",preferredStyle: .alert)
+                alertview.addAction(UIAlertAction(title:"Ok", style: .default, handler: nil))
+                self.present(alertview, animated:true, completion: nil)
+            }
+        }
         
     }
-    
 }

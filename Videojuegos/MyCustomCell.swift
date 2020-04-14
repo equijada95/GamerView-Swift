@@ -20,10 +20,15 @@ class MyCustomCell : UITableViewCell
     @IBOutlet weak var dropDownButton: UIButton!
     
     
-
+    @IBOutlet weak var btnPlayVideo: UIButton!
+    
     
     @IBAction func buttonPressed(_ sender: UIButton) {
         cellDelegate?.didTapButton(cell: self)
+    }
+    
+    @IBAction func playVideo(_ sender: UIButton) {
+        cellDelegate?.playVideo(cell: self)
     }
     
     func getIndexPath() -> IndexPath? {
@@ -36,9 +41,13 @@ class MyCustomCell : UITableViewCell
     }
     
     
+
     
 }
 
 protocol YourCellDelegate : class {
     func didTapButton(cell: MyCustomCell)
+    func playVideo(cell: MyCustomCell)
 }
+
+    

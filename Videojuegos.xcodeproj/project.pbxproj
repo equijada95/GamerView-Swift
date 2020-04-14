@@ -23,6 +23,7 @@
 		3A8E662F24251D51007E2F51 /* VideojuegosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8E662E24251D51007E2F51 /* VideojuegosTests.swift */; };
 		3A8E663A24251D51007E2F51 /* VideojuegosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8E663924251D51007E2F51 /* VideojuegosUITests.swift */; };
 		3A8E664924251DAB007E2F51 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 3A8E664824251DAB007E2F51 /* Alamofire */; };
+		3AD7789E244510F2002CC274 /* Clip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD7789D244510F2002CC274 /* Clip.swift */; };
 		3AE4B43D2433787000361EDB /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE4B43C2433787000361EDB /* Image.swift */; };
 		3AE4B44024339ACF00361EDB /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3AE4B43F24339ACF00361EDB /* Kingfisher */; };
 		3AE4B44224339ACF00361EDB /* KingfisherSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 3AE4B44124339ACF00361EDB /* KingfisherSwiftUI */; };
@@ -71,6 +72,7 @@
 		3A8E663524251D51007E2F51 /* VideojuegosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideojuegosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8E663924251D51007E2F51 /* VideojuegosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideojuegosUITests.swift; sourceTree = "<group>"; };
 		3A8E663B24251D51007E2F51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AD7789D244510F2002CC274 /* Clip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clip.swift; sourceTree = "<group>"; };
 		3AE4B43C2433787000361EDB /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		3AE4B449243656C600361EDB /* HiddenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenCell.swift; sourceTree = "<group>"; };
 		3AEF0A4D242B802500345698 /* ApiRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequests.swift; sourceTree = "<group>"; };
@@ -129,21 +131,23 @@
 		3A8E661624251D50007E2F51 /* Videojuegos */ = {
 			isa = PBXGroup;
 			children = (
+				3AD7789F24451433002CC274 /* Structs */,
 				3AEF0A4D242B802500345698 /* ApiRequests.swift */,
 				3A8E661724251D50007E2F51 /* AppDelegate.swift */,
 				3A8E662024251D51007E2F51 /* Assets.xcassets */,
 				3A8E662524251D51007E2F51 /* Info.plist */,
 				3A8E662224251D51007E2F51 /* LaunchScreen.storyboard */,
-				3A8E661D24251D50007E2F51 /* Main.storyboard */,
-				3A1BF3DF242A2B47000AC67A /* MyCustomCell.swift */,
 				3A150D91242E16D7001782B2 /* Platform.swift */,
 				3A150D93242E1719001782B2 /* Platforms.swift */,
-				3A8E661924251D50007E2F51 /* SceneDelegate.swift */,
 				3AFFCD08242D2E090000D478 /* Search.swift */,
 				3A150D97242E1778001782B2 /* Store.swift */,
 				3A150D95242E1768001782B2 /* Stores.swift */,
-				3A1BF3E3242A6D5A000AC67A /* TableViewController.swift */,
 				3AFFCD0A242D2EB00000D478 /* Videogame.swift */,
+				3AD7789D244510F2002CC274 /* Clip.swift */,
+				3A8E661D24251D50007E2F51 /* Main.storyboard */,
+				3A1BF3DF242A2B47000AC67A /* MyCustomCell.swift */,
+				3A8E661924251D50007E2F51 /* SceneDelegate.swift */,
+				3A1BF3E3242A6D5A000AC67A /* TableViewController.swift */,
 				3A8E661B24251D50007E2F51 /* ViewController.swift */,
 				3AE4B43C2433787000361EDB /* Image.swift */,
 				3AE4B449243656C600361EDB /* HiddenCell.swift */,
@@ -168,6 +172,13 @@
 				3A8E663B24251D51007E2F51 /* Info.plist */,
 			);
 			path = VideojuegosUITests;
+			sourceTree = "<group>";
+		};
+		3AD7789F24451433002CC274 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Structs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -316,6 +327,7 @@
 				3A150D98242E1778001782B2 /* Store.swift in Sources */,
 				3A48FFC624374DF600FFECA5 /* HiddenTable.swift in Sources */,
 				3A8E661824251D50007E2F51 /* AppDelegate.swift in Sources */,
+				3AD7789E244510F2002CC274 /* Clip.swift in Sources */,
 				3AEF0A4E242B802500345698 /* ApiRequests.swift in Sources */,
 				3AE4B43D2433787000361EDB /* Image.swift in Sources */,
 				3AFFCD0B242D2EB00000D478 /* Videogame.swift in Sources */,
