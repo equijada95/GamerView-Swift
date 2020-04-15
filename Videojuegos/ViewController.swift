@@ -8,47 +8,58 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController{
     
-    @IBOutlet weak var campo: UITextField!
-
     var apiRequest = ApiRequests()
     var items : [Videogame] = []
+    var count : Int = 0
+    
+    var page = 1
+    
+    var name = ""
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        campo.delegate = self    }
-    
-    
-    @IBAction func pulsarOk() {
-        
-        if let juego = campo.text
-        {
-            apiRequest.alamoFire(for: juego, completionHandler: {
-                items in
-                    
-                self.items = items
-               
-                self.performSegue(withIdentifier: "push", sender: self)
-            })
-            
-            
-        }
-        campo.resignFirstResponder()
+        searchBar.delegate = self
     }
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    
+    func searchGames(name: String, page: Int)
+    {
+        apiRequest.alamoFire(for: name, for: page, completionHandler: {
+            search in
+            self.count = search.count
+            let items = search.results
+            self.items = items
+            self.performSegue(withIdentifier: "push", sender: self)
+    }
+    )}
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let tVC = segue.destination as? TableViewController
         {
             tVC.videogames = self.items
+            tVC.apiRequest = self.apiRequest
+            tVC.nameSearch = self.name
+            tVC.numPage = self.page
+            
         }
+
     }
-    
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        return campo.resignFirstResponder()
-    }
-    
+}
+
+extension ViewController: UISearchBarDelegate {
+  func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    guard let name = searchBar.text else { return }
+    self.name = name
+    searchGames(name: name, page: page)
+  }
+  
+  func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+    searchBar.text = nil
+    searchBar.resignFirstResponder()
+  }
 }

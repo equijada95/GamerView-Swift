@@ -22,8 +22,23 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var urlVideo : String = ""
     var playerViewController = AVPlayerViewController()
     
+    var apiRequest = ApiRequests()
+    var nameSearch = ""
+    var numPage = 0
     
-
+    @IBOutlet weak var tableView: UITableView!
+    
+    
+        
+    @IBAction func pressNext() {
+        numPage = numPage + 1
+        apiRequest.alamoFire(for: nameSearch, for: numPage, completionHandler: {
+            search in
+            let items = search.results
+            self.videogames = items
+            self.tableView.reloadData()
+          })
+    }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! MyCustomCell
@@ -47,8 +62,6 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return videogames.count
     }
     
-
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let hTable = segue.destination as? HiddenTable
@@ -67,7 +80,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     // MARK: UITableViewDelegate methods
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(videogames[indexPath.section])//[indexPath.row])
+        print(videogames[indexPath.section])
     }
     
 
@@ -94,9 +107,9 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 self.present(playerViewController, animated: true, completion: nil)
             }
             else {
-                let alertview = UIAlertController(title:"Trailer not found",message:"Sorry but no trailer found for this video game",preferredStyle: .alert)
+                let alertview = UIAlertController(title:"Trailer not found",message:"Sorry but no trailer found for this videogame",preferredStyle: .alert)
                 alertview.addAction(UIAlertAction(title:"Ok", style: .default, handler: nil))
-                self.present(alertview, animated:true, completion: nil)
+                self.present(alertview, animated: true, completion: nil)
             }
         }
         

@@ -18,18 +18,16 @@ class Image: UIImageView
     {
         let url = URL(string: urlString)
         imageView.kf.setImage(with: url)
-        {
-            result in
-            switch result {
-            case .success(let value):
-                print("Task done for: \(value.source.url?.absoluteString ?? "")")
-            case .failure(let error):
-                print("Job failed: \(error.localizedDescription)")
-            }
-        }
+      //  {
+      //      result in
+      //      switch result {
+      //      case .success(let value):
+      //          print("Task done for: \(value.source.url?.absoluteString ?? "")")
+      //      case .failure(let error):
+      //          print("Job failed: \(error.localizedDescription)")
+      //      }
+      //  }
         return imageView
-
-       // KFImage(URL(string: "https://example.com/image.png")!)
         
     }
 }

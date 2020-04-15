@@ -8,9 +8,11 @@
 
 struct Search : Codable {
     
+    var count : Int
     var results : [Videogame]
     
     enum CodingKeys: String, CodingKey {
-      case results = "results"
+        case count = "count"
+        case results = "results"
     }
 }
