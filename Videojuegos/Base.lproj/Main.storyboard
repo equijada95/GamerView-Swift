@@ -119,15 +119,25 @@
                                 <rect key="frame" x="44" y="574" width="59" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Previous"/>
+                                <connections>
+                                    <action selector="actionPage:" destination="Hf2-GH-grA" eventType="touchUpInside" id="snw-08-HnL"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aPF-OR-J2j">
-                                <rect key="frame" x="284" y="574" width="32" height="30"/>
+                                <rect key="frame" x="273" y="574" width="32" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Next"/>
                                 <connections>
-                                    <action selector="pressNext" destination="Hf2-GH-grA" eventType="touchUpInside" id="FEM-Mm-fmZ"/>
+                                    <action selector="actionPage:" destination="Hf2-GH-grA" eventType="touchUpInside" id="dOc-Tc-FBD"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Pu-Bn-sq3">
+                                <rect key="frame" x="133" y="579" width="104" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -140,6 +150,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="co6-7j-BzM"/>
                     <connections>
+                        <outlet property="nextBtn" destination="aPF-OR-J2j" id="lZC-SC-fEk"/>
+                        <outlet property="previousBtn" destination="6NB-px-X5e" id="Qlh-Ys-ZyP"/>
+                        <outlet property="results" destination="4Pu-Bn-sq3" id="AIg-Nh-64a"/>
                         <outlet property="tableView" destination="1tG-9C-wSB" id="ZG1-0G-n3j"/>
                         <segue destination="0NW-hT-GXQ" kind="show" identifier="platforms" id="PcQ-xq-901"/>
                     </connections>

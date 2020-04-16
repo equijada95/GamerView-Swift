@@ -25,20 +25,73 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var apiRequest = ApiRequests()
     var nameSearch = ""
     var numPage = 0
+    var numResults = 0
+    
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var results: UILabel!
     
+    @IBOutlet weak var previousBtn: UIButton!
+    
+
+    @IBOutlet weak var nextBtn: UIButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        checkNumPage()
+        results.text = "Results: \(numResults)"
         
-    @IBAction func pressNext() {
-        numPage = numPage + 1
-        apiRequest.alamoFire(for: nameSearch, for: numPage, completionHandler: {
-            search in
-            let items = search.results
-            self.videogames = items
-            self.tableView.reloadData()
-          })
+
     }
+    
+    
+    @IBAction func actionPage(_ sender: UIButton) {
+        
+        if(sender == nextBtn){
+            numPage = numPage + 1
+            checkNumPage()
+            apiRequest.alamoFire(for: nameSearch, for: numPage, completionHandler: {
+                search in
+                let items = search.results
+                self.videogames = items
+                self.tableView.reloadData()
+                })
+            
+            }
+        if(sender == previousBtn){
+            
+            numPage = numPage - 1
+            checkNumPage()
+            apiRequest.alamoFire(for: nameSearch, for: numPage, completionHandler: {
+                search in
+                let items = search.results
+                self.videogames = items
+                self.tableView.reloadData()
+            })
+        }
+    }
+    
+    func checkNumPage()
+    {
+        let maxPages : Double = Double(self.numResults)/20
+        if(numPage == 1)
+        {
+            previousBtn.isHidden = true
+        }
+        if (numPage > 1){
+            previousBtn.isHidden = false
+        }
+        if(numPage > Int(floor(maxPages)))
+        {
+
+            self.nextBtn.isHidden = true
+        } else{
+            
+            self.nextBtn.isHidden = false
+        }
+    }
+
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! MyCustomCell

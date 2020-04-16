@@ -45,6 +45,7 @@ class ViewController: UIViewController{
             tVC.apiRequest = self.apiRequest
             tVC.nameSearch = self.name
             tVC.numPage = self.page
+            tVC.numResults = self.count
             
         }
 
