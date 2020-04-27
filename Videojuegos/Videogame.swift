@@ -6,12 +6,14 @@
 //  Copyright © 2020 MIMO. All rights reserved.
 //
 
+import CoreData
+
 struct Videogame : Codable
 {
     var id: Int
     var name: String
     var image: String?
-    var platforms: [Platforms]
+    var platforms: [Platforms]?
     var stores: [Stores]?
     var rating: Double
     var clip: Clip?
@@ -25,5 +27,12 @@ struct Videogame : Codable
         case rating = "rating"
         case clip = "clip"
         }
+    
+    // esta es la clase para codearlo, no la de core data
 
 }
+
+//extension StructDecoder {
+//    func toCoreData(context: NSManagedObjectContext) throws -> NSManagedObject {
+//    }
+//}

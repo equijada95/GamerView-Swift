@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="18G2022" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ClipFav" representedClassName="ClipFav" syncable="YES" codeGenerationType="class">
+        <attribute name="clip" optional="YES" attributeType="String"/>
+        <relationship name="videogame" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VideogameFav" inverseName="clip" inverseEntity="VideogameFav"/>
+    </entity>
+    <entity name="PlatformFav" representedClassName="PlatformFav" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="platforms" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PlatformsFav" inverseName="platform" inverseEntity="PlatformsFav"/>
+    </entity>
+    <entity name="PlatformsFav" representedClassName="PlatformsFav" syncable="YES" codeGenerationType="class">
+        <relationship name="platform" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PlatformFav" inverseName="platforms" inverseEntity="PlatformFav"/>
+        <relationship name="videogame" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VideogameFav" inverseName="platforms" inverseEntity="VideogameFav"/>
+    </entity>
+    <entity name="StoreFav" representedClassName="StoreFav" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="stores" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StoresFav" inverseName="store" inverseEntity="StoresFav"/>
+    </entity>
+    <entity name="StoresFav" representedClassName="StoresFav" syncable="YES" codeGenerationType="class">
+        <relationship name="store" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="StoreFav" inverseName="stores" inverseEntity="StoreFav"/>
+        <relationship name="videogame" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="VideogameFav" inverseName="stores" inverseEntity="VideogameFav"/>
+    </entity>
+    <entity name="VideogameFav" representedClassName="VideogameFav" syncable="YES" codeGenerationType="class">
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="image" optional="YES" attributeType="String"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="rating" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <relationship name="clip" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ClipFav" inverseName="videogame" inverseEntity="ClipFav"/>
+        <relationship name="platforms" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PlatformsFav" inverseName="videogame" inverseEntity="PlatformsFav"/>
+        <relationship name="stores" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="StoresFav" inverseName="videogame" inverseEntity="StoresFav"/>
+    </entity>
+    <elements>
+        <element name="ClipFav" positionX="-0.6171875" positionY="292.8984375" width="128" height="73"/>
+        <element name="PlatformFav" positionX="-366.515625" positionY="-211.359375" width="128" height="88"/>
+        <element name="PlatformsFav" positionX="-200.94140625" positionY="-77.56640625" width="128" height="73"/>
+        <element name="StoreFav" positionX="398.1171875" positionY="-263.85546875" width="128" height="88"/>
+        <element name="StoresFav" positionX="241.82421875" positionY="-129.71484375" width="128" height="73"/>
+        <element name="VideogameFav" positionX="-9" positionY="36" width="128" height="163"/>
+    </elements>
+</model>

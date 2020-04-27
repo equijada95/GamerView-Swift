@@ -10,15 +10,16 @@ import UIKit
 import Kingfisher
 import AVFoundation
 import AVKit
+import CoreData
 
 class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, YourCellDelegate
 {
     
-    
     var videogames : [Videogame] = []
     var image = Image()
     var imageVideogame : UIImageView? = UIImageView()
-    var platforms: [Platforms] = []
+    var platforms: [Platforms]? = []
+    var stores: [Stores]? = []
     var urlVideo : String = ""
     var playerViewController = AVPlayerViewController()
     
@@ -26,6 +27,16 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var nameSearch = ""
     var numPage = 0
     var numResults = 0
+    
+    var videogamesFav : [VideogameFav] = []
+     var coreDataStack: CoreDataStack!
+     var managedContext: NSManagedObjectContext!
+     {
+         get
+         {
+             return coreDataStack.context
+         }
+     }
     
     
     @IBOutlet weak var tableView: UITableView!
@@ -42,9 +53,21 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         checkNumPage()
         results.text = "Results: \(numResults)"
         
+        let favFetchRequest = NSFetchRequest<VideogameFav>(entityName: "VideogameFav")
+    
+            do
+            {
+                videogamesFav = try managedContext.fetch(favFetchRequest)
+            }
+            catch
+            {
+                print("Error fetching videogames: \(error)")
+            }
+        
 
     }
     
+    // MARK: Action Buttons
     
     @IBAction func actionPage(_ sender: UIButton) {
         
@@ -92,6 +115,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         }
     }
 
+    // MARK: UITableViewDataSource methods
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCell", for: indexPath) as! MyCustomCell
@@ -119,10 +143,15 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let hTable = segue.destination as? HiddenTable
         {
-            hTable.platforms = platforms
+            if(platforms!.count > 0){
+                hTable.platforms = platforms!
+            }
+            if(stores!.count > 0){
+                hTable.stores = stores!
+            }
         }
     }
-    // MARK: UITableViewDataSource methods
+    
     
     
     
@@ -133,16 +162,114 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     // MARK: UITableViewDelegate methods
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(videogames[indexPath.section])
+      //  print(videogames[indexPath.section])
+        let alertview = UIAlertController(title:"Add Favorites?",message:"Do you want to add this video game to favorites?",preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let actionOk = UIAlertAction(title: "Ok", style: .destructive, handler: {(accion) in
+           let entity = NSEntityDescription.entity(forEntityName: "VideogameFav",
+                                                   in: self.managedContext)!
+               let entity2 = NSEntityDescription.entity(forEntityName: "ClipFav",
+                                                        in: self.managedContext)!
+               let entity3 = NSEntityDescription.entity(forEntityName: "PlatformFav",
+                                                        in: self.managedContext)!
+               let entity4 = NSEntityDescription.entity(forEntityName: "PlatformsFav",
+                                                        in: self.managedContext)!
+            let entity5 = NSEntityDescription.entity(forEntityName: "StoreFav",
+                                                     in: self.managedContext)!
+            let entity6 = NSEntityDescription.entity(forEntityName: "StoresFav",
+                                                     in: self.managedContext)!
+            let videogame = VideogameFav(entity: entity, insertInto: self.managedContext)
+            if self.videogamesFav.contains(where: {element in
+                if case element.id = Int64(self.videogames[indexPath.row].id){
+                    return true
+                }else{
+                    return false
+                }
+            }){
+                let alertview = UIAlertController(title:"Repeated Favorite",message:"This video game has been previously added to favorites",preferredStyle: .alert)
+                alertview.addAction(UIAlertAction(title:"Ok", style: .default, handler: nil))
+                                   self.present(alertview, animated: true, completion: nil)
+            }else{
+            videogame.id = Int64(self.videogames[indexPath.row].id)
+            videogame.name = self.videogames[indexPath.row].name
+            videogame.image = self.videogames[indexPath.row].image
+            videogame.rating = self.videogames[indexPath.row].rating
+               videogame.date = Date()
+            if self.videogames[indexPath.row].clip != nil{
+                let clip = ClipFav(entity: entity2, insertInto: self.managedContext)
+                clip.clip = self.videogames[indexPath.row].clip!.clip
+                   videogame.clip = clip
+            
+               }
+        
+            if self.videogames[indexPath.row].platforms != nil{
+                for i in self.videogames[indexPath.row].platforms!
+                   {
+                    let platform = PlatformFav(entity: entity3, insertInto: self.managedContext)
+                       platform.name = i.platform.name
+                        platform.id = Int64(i.platform.id)
+                    let platforms = PlatformsFav(entity: entity4, insertInto: self.managedContext)
+                       platforms.platform = platform
+                    let mutablePlatforms = videogame.platforms?.mutableCopy() as! NSMutableSet
+                    mutablePlatforms.add(platforms)
+                    videogame.platforms = mutablePlatforms as NSSet
+                   }
+                }
+            if self.videogames[indexPath.row].stores != nil{
+                for i in self.videogames[indexPath.row].stores!
+               {
+                let store = StoreFav(entity: entity5, insertInto: self.managedContext)
+                   store.name = i.store.name
+                    store.id = Int64(i.store.id)
+                let stores = StoresFav(entity: entity6, insertInto: self.managedContext)
+                   stores.store = store
+                let mutableStores = videogame.stores?.mutableCopy() as! NSMutableSet
+                mutableStores.add(stores)
+                videogame.stores = mutableStores as NSSet
+                // el problema que tengo es que despues de hacer esto no sabria acceder al store que almaceno dentro de stores
+               }
+            }
+            self.coreDataStack.saveContext()
+   
+   
+            self.videogamesFav.append(videogame)
+           //  print(videogamesFav)
+                }
+        })
+        
+        alertview.addAction(actionOk)
+        alertview.addAction(cancelAction)
+        self.present(alertview, animated: true, completion: nil)
     }
     
-
-    
-    func didTapButton (cell: MyCustomCell){
+    func getPlatforms (cell: MyCustomCell){
         if let indexPath = cell.getIndexPath(){
-            platforms = videogames[indexPath.row].platforms
+            if(videogames[indexPath.row].platforms != nil){
+                    platforms = videogames[indexPath.row].platforms
             
-            self.performSegue(withIdentifier: "platforms", sender: self)
+                    self.performSegue(withIdentifier: "hiddenViewTable", sender: self)
+                    platforms = []
+                } else{
+                    let alertview = UIAlertController(title:"Platforms not found",message:"Sorry but no platforms found for this videogame",preferredStyle: .alert)
+                    alertview.addAction(UIAlertAction(title:"Ok", style: .default, handler: nil))
+                    self.present(alertview, animated: true, completion: nil)
+                }
+        }
+    }
+    
+    func getStores(cell: MyCustomCell)
+    {
+        if let indexPath = cell.getIndexPath(){
+            if(videogames[indexPath.row].stores != nil){
+                stores = videogames[indexPath.row].stores
+        
+                self.performSegue(withIdentifier: "hiddenViewTable", sender: self)
+                stores = []
+            } else{
+                let alertview = UIAlertController(title:"Stores not found",message:"Sorry but no stores found for this videogame",preferredStyle: .alert)
+                alertview.addAction(UIAlertAction(title:"Ok", style: .default, handler: nil))
+                self.present(alertview, animated: true, completion: nil)
+            }
         }
     }
         

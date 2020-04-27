@@ -17,37 +17,41 @@ class MyCustomCell : UITableViewCell
     @IBOutlet var ratingLabel: UILabel!
     @IBOutlet weak var imageVideogame: UIImageView!
     
-    @IBOutlet weak var dropDownButton: UIButton!
+    @IBOutlet weak var dateLabel: UILabel!
     
+    @IBOutlet weak var btnPlatforms: UIButton!
+    
+    @IBOutlet weak var btnStores: UIButton!
     
     @IBOutlet weak var btnPlayVideo: UIButton!
     
     
-    @IBAction func buttonPressed(_ sender: UIButton) {
-        cellDelegate?.didTapButton(cell: self)
+    @IBAction func getPlatforms(_ sender: UIButton) {
+        cellDelegate?.getPlatforms(cell: self)
     }
     
     @IBAction func playVideo(_ sender: UIButton) {
         cellDelegate?.playVideo(cell: self)
     }
     
+    @IBAction func getStores(_ sender: Any) {
+        cellDelegate?.getStores(cell: self)
+    }
+    
+    
     func getIndexPath() -> IndexPath? {
         guard let superView = self.superview as? UITableView else {
-            print("superview is not a UITableView - getIndexPath")
             return nil
         }
         let indexPath = superView.indexPath(for: self)
         return indexPath
     }
-    
-    
-
-    
 }
 
 protocol YourCellDelegate : class {
-    func didTapButton(cell: MyCustomCell)
+    func getPlatforms(cell: MyCustomCell)
     func playVideo(cell: MyCustomCell)
+    func getStores(cell: MyCustomCell)
 }
 
     

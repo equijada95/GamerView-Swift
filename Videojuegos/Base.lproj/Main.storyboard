@@ -15,23 +15,118 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ces-ar-6Vc">
+                            <searchBar contentMode="redraw" fixedFrame="YES" text="" translatesAutoresizingMaskIntoConstraints="NO" id="Ces-ar-6Vc">
                                 <rect key="frame" x="0.0" y="97" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bXi-rU-ojX">
+                                <rect key="frame" x="0.0" y="141" width="375" height="526"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favCell" id="4nv-67-w7f" customClass="MyCustomCell" customModule="Videojuegos" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="287"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4nv-67-w7f" id="f24-Rg-FRw">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="287"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KRD-hr-BXx">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="287"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E4O-bW-lyl">
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="135"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="135" id="Fk6-wC-way"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eeu-zN-LDW">
+                                                            <rect key="frame" x="0.0" y="135" width="374" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGf-Yf-UAA">
+                                                            <rect key="frame" x="0.0" y="155.5" width="374" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZe-3b-iGa">
+                                                            <rect key="frame" x="0.0" y="176" width="374" height="20.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLD-rT-4db">
+                                                            <rect key="frame" x="0.0" y="196.5" width="374" height="30"/>
+                                                            <state key="normal" title="Digital Stores"/>
+                                                            <connections>
+                                                                <action selector="getStores:" destination="4nv-67-w7f" eventType="touchUpInside" id="Nw3-EO-rIo"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29x-Q8-umU">
+                                                            <rect key="frame" x="0.0" y="226.5" width="374" height="30"/>
+                                                            <state key="normal" title="Platforms"/>
+                                                            <connections>
+                                                                <action selector="getPlatforms:" destination="4nv-67-w7f" eventType="touchUpInside" id="lK2-XM-fyD"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8he-R8-99n">
+                                                            <rect key="frame" x="0.0" y="256.5" width="374" height="30.5"/>
+                                                            <state key="normal" title="Trailer"/>
+                                                            <connections>
+                                                                <action selector="playVideo:" destination="4nv-67-w7f" eventType="touchUpInside" id="JQP-Fh-KOZ"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="E4O-bW-lyl" firstAttribute="leading" secondItem="Eeu-zN-LDW" secondAttribute="leading" id="fvY-1f-zgu"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="KRD-hr-BXx" secondAttribute="bottom" id="Pf0-7o-YP7"/>
+                                                <constraint firstAttribute="trailing" secondItem="KRD-hr-BXx" secondAttribute="trailing" constant="1" id="UoV-Io-JT9"/>
+                                                <constraint firstItem="KRD-hr-BXx" firstAttribute="leading" secondItem="f24-Rg-FRw" secondAttribute="leading" id="r3f-7T-ogc"/>
+                                                <constraint firstItem="KRD-hr-BXx" firstAttribute="top" secondItem="f24-Rg-FRw" secondAttribute="top" id="tfd-8G-Tba"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="btnPlatforms" destination="29x-Q8-umU" id="Wl3-Yl-7Vr"/>
+                                            <outlet property="btnPlayVideo" destination="8he-R8-99n" id="AsE-ma-XiX"/>
+                                            <outlet property="btnStores" destination="LLD-rT-4db" id="hvI-64-5qO"/>
+                                            <outlet property="dateLabel" destination="uGf-Yf-UAA" id="WUo-PX-ZUu"/>
+                                            <outlet property="imageVideogame" destination="E4O-bW-lyl" id="jjr-Qe-fpZ"/>
+                                            <outlet property="nameLabel" destination="Eeu-zN-LDW" id="70Z-P0-vIU"/>
+                                            <outlet property="ratingLabel" destination="lZe-3b-iGa" id="Kw5-Ft-pcj"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="3um-o8-xhd"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="I70-Az-Z0d"/>
+                                </connections>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="bXi-rU-ojX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="141" id="TF4-DY-cr6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bXi-rU-ojX" secondAttribute="trailing" id="Wej-EO-Ru1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bXi-rU-ojX" secondAttribute="bottom" id="aaK-7i-EuK"/>
+                            <constraint firstItem="bXi-rU-ojX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="o8j-uR-XqG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="searchBar" destination="Ces-ar-6Vc" id="U40-Ds-7z1"/>
                         <segue destination="Hf2-GH-grA" kind="show" identifier="push" id="Chh-wO-NNk"/>
+                        <segue destination="0NW-hT-GXQ" kind="show" identifier="hiddenViewTable" id="dWF-Qd-tOq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131.8840579710145" y="136.60714285714286"/>
+            <point key="canvasLocation" x="130.40000000000001" y="136.28185907046478"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="N0X-BV-wTO">
@@ -46,14 +141,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" id="X85-ch-XUV" customClass="MyCustomCell" customModule="Videojuegos" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="236.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="266.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X85-ch-XUV" id="68B-zF-95i">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="236.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="266.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="agf-JC-UeI">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="236.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="266.5"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AxX-Q5-GMa">
                                                             <rect key="frame" x="0.0" y="0.0" width="375" height="135"/>
@@ -74,15 +169,22 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0g-C1-fcb">
+                                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEn-NQ-nA8">
                                                             <rect key="frame" x="0.0" y="176" width="375" height="30"/>
+                                                            <state key="normal" title="Digital Stores"/>
+                                                            <connections>
+                                                                <action selector="getStores:" destination="X85-ch-XUV" eventType="touchUpInside" id="Wyg-aI-BaG"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0g-C1-fcb">
+                                                            <rect key="frame" x="0.0" y="206" width="375" height="30"/>
                                                             <state key="normal" title="Platforms"/>
                                                             <connections>
-                                                                <action selector="buttonPressed:" destination="X85-ch-XUV" eventType="touchUpInside" id="8Tp-cS-bje"/>
+                                                                <action selector="getPlatforms:" destination="X85-ch-XUV" eventType="touchUpInside" id="uxo-Sr-kIn"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCp-VN-64e">
-                                                            <rect key="frame" x="0.0" y="206" width="375" height="30.5"/>
+                                                            <rect key="frame" x="0.0" y="236" width="375" height="30.5"/>
                                                             <state key="normal" title="Trailer"/>
                                                             <connections>
                                                                 <action selector="playVideo:" destination="X85-ch-XUV" eventType="touchUpInside" id="2YK-uf-k47"/>
@@ -102,8 +204,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="btnPlatforms" destination="P0g-C1-fcb" id="Qnc-MZ-2Ye"/>
                                             <outlet property="btnPlayVideo" destination="UCp-VN-64e" id="9qj-jL-kbl"/>
-                                            <outlet property="dropDownButton" destination="P0g-C1-fcb" id="Fhf-ji-HcL"/>
+                                            <outlet property="btnStores" destination="BEn-NQ-nA8" id="dyh-zT-TCD"/>
                                             <outlet property="imageVideogame" destination="AxX-Q5-GMa" id="AEc-xU-4YB"/>
                                             <outlet property="nameLabel" destination="Dhr-g6-urK" id="46I-3S-1yj"/>
                                             <outlet property="ratingLabel" destination="hGf-sO-J2B" id="SaV-br-Uie"/>
@@ -154,12 +257,12 @@
                         <outlet property="previousBtn" destination="6NB-px-X5e" id="Qlh-Ys-ZyP"/>
                         <outlet property="results" destination="4Pu-Bn-sq3" id="AIg-Nh-64a"/>
                         <outlet property="tableView" destination="1tG-9C-wSB" id="ZG1-0G-n3j"/>
-                        <segue destination="0NW-hT-GXQ" kind="show" identifier="platforms" id="PcQ-xq-901"/>
+                        <segue destination="0NW-hT-GXQ" kind="show" identifier="hiddenViewTable" id="PcQ-xq-901"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0wF-qb-lfv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="908" y="143.47826086956522"/>
+            <point key="canvasLocation" x="988" y="-468"/>
         </scene>
         <!--Hidden Table-->
         <scene sceneID="iXH-nb-fmy">
@@ -174,14 +277,14 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="platformViewCell" id="ydp-AR-Cxg" customClass="HiddenCell" customModule="Videojuegos" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="hiddenViewCell" id="ydp-AR-Cxg" customClass="HiddenCell" customModule="Videojuegos" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ydp-AR-Cxg" id="88L-JB-wPL">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6rS-J5-bDS">
+                                                <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6rS-J5-bDS">
                                                     <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1y-fc-NUX">
@@ -215,4 +318,7 @@
             <point key="canvasLocation" x="1929" y="144"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="dWF-Qd-tOq"/>
+    </inferredMetricsTieBreakers>
 </document>
