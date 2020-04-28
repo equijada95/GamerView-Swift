@@ -14,7 +14,8 @@ class HiddenTable: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     var platforms: [Platforms] = []
     var stores: [Stores] = []
-    var nsSet : NSSet = NSSet()
+    var platformsFav : [PlatformsFav] = []
+    var storesFav : [StoresFav] = []
     
     
     
@@ -26,6 +27,12 @@ class HiddenTable: UIViewController, UITableViewDelegate, UITableViewDataSource
             if(stores.count > 0){
                 cell.nameLabel.text = stores[indexPath.row].store.name
             }
+            if(platformsFav.count > 0){
+                    cell.nameLabel.text = platformsFav[indexPath.row].platform?.name
+                }
+        if(storesFav.count > 0){
+            cell.nameLabel.text = storesFav[indexPath.row].store?.name
+        }
             return cell
     }
     
@@ -36,6 +43,12 @@ class HiddenTable: UIViewController, UITableViewDelegate, UITableViewDataSource
         }
         if(stores.count > 0){
             return stores.count
+        }
+        if(platformsFav.count > 0){
+            return platformsFav.count
+        }
+        if(storesFav.count > 0){
+            return storesFav.count
         }
         return 0
     }
@@ -50,6 +63,12 @@ class HiddenTable: UIViewController, UITableViewDelegate, UITableViewDataSource
         if(stores.count > 0){
             return stores[section].store
         }
+        if(platformsFav.count > 0){
+            return platformsFav[section].platform as? Codable
+        }
+        if(storesFav.count > 0){
+            return storesFav[section].store as? Codable
+        }
         return nil
     }
     
@@ -62,7 +81,12 @@ class HiddenTable: UIViewController, UITableViewDelegate, UITableViewDataSource
         if(stores.count > 0){
             print(stores[indexPath.section].store)
         }
-        
+        if(platformsFav.count > 0){
+            print(platformsFav[indexPath.section].platform)
+        }
+        if(storesFav.count > 0){
+            print(storesFav[indexPath.section].store)
+        }
     }
     
 }

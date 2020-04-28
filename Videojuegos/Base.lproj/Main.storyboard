@@ -120,6 +120,7 @@
                     </view>
                     <connections>
                         <outlet property="searchBar" destination="Ces-ar-6Vc" id="U40-Ds-7z1"/>
+                        <outlet property="tableView" destination="bXi-rU-ojX" id="uCu-63-vsF"/>
                         <segue destination="Hf2-GH-grA" kind="show" identifier="push" id="Chh-wO-NNk"/>
                         <segue destination="0NW-hT-GXQ" kind="show" identifier="hiddenViewTable" id="dWF-Qd-tOq"/>
                     </connections>

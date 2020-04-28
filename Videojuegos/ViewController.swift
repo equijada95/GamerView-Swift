@@ -28,8 +28,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var videogames : [VideogameFav] = []
     var urlVideo : String = ""
     var playerViewController = AVPlayerViewController()
-    var platforms: NSSet? = []
-    var stores: [StoresFav]? = []
+    var platformsFav : [PlatformsFav]? = []
+    var storesFav : [StoresFav]? = []
  
     var managedContext: NSManagedObjectContext!
     {
@@ -46,7 +46,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return formatter
     }()
     
-
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         searchBar.delegate = self
@@ -61,6 +62,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 {
                     print("Error fetching videogames: \(error)")
                 }
+        tableView.reloadData()
     }
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -87,6 +89,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             tVC.numResults = self.count
             tVC.coreDataStack = self.coreDataStack
             
+        }
+        if let hTable = segue.destination as? HiddenTable
+        {
+            if(platformsFav!.count > 0){
+                hTable.platformsFav = platformsFav!
+            }
+            if(storesFav!.count > 0){
+                hTable.storesFav = storesFav!
+            }
         }
 
     }
@@ -132,9 +143,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func getPlatforms(cell: MyCustomCell) {
         if let indexPath = cell.getIndexPath(){
             if(videogames[indexPath.row].platforms != nil){
-                    platforms = videogames[indexPath.row].platforms
+                platformsFav = videogames[indexPath.row].platforms?.allObjects as? [PlatformsFav]
                     self.performSegue(withIdentifier: "hiddenViewTable", sender: self)
-                    platforms = []
+                    platformsFav = []
                 } else{
                     let alertview = UIAlertController(title:"Platforms not found",message:"Sorry but no platforms found for this videogame",preferredStyle: .alert)
                     alertview.addAction(UIAlertAction(title:"Ok", style: .default, handler: nil))
@@ -164,8 +175,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func getStores(cell: MyCustomCell) {
-        print("caca")
+        if let indexPath = cell.getIndexPath(){
+            if(videogames[indexPath.row].stores != nil){
+                storesFav = videogames[indexPath.row].stores?.allObjects as? [StoresFav]
+                    self.performSegue(withIdentifier: "hiddenViewTable", sender: self)
+                    storesFav = []
+                } else{
+                    let alertview = UIAlertController(title:"Stores not found",message:"Sorry but no stores found for this videogame",preferredStyle: .alert)
+                    alertview.addAction(UIAlertAction(title:"Ok", style: .default, handler: nil))
+                    self.present(alertview, animated: true, completion: nil)
+                }
+        }
     }
+    
+    
 }
 
 extension ViewController: UISearchBarDelegate {

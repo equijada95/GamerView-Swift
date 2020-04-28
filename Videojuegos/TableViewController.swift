@@ -29,6 +29,8 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var numResults = 0
     
     var videogamesFav : [VideogameFav] = []
+    
+    
      var coreDataStack: CoreDataStack!
      var managedContext: NSManagedObjectContext!
      {
@@ -203,6 +205,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
                }
         
             if self.videogames[indexPath.row].platforms != nil{
+                let mutablePlatforms = videogame.platforms?.mutableCopy() as! NSMutableSet
                 for i in self.videogames[indexPath.row].platforms!
                    {
                     let platform = PlatformFav(entity: entity3, insertInto: self.managedContext)
@@ -210,12 +213,15 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
                         platform.id = Int64(i.platform.id)
                     let platforms = PlatformsFav(entity: entity4, insertInto: self.managedContext)
                        platforms.platform = platform
-                    let mutablePlatforms = videogame.platforms?.mutableCopy() as! NSMutableSet
+                    
                     mutablePlatforms.add(platforms)
-                    videogame.platforms = mutablePlatforms as NSSet
+                    
+                    
                    }
+                videogame.platforms = mutablePlatforms as NSSet
                 }
             if self.videogames[indexPath.row].stores != nil{
+                let mutableStores = videogame.stores?.mutableCopy() as! NSMutableSet
                 for i in self.videogames[indexPath.row].stores!
                {
                 let store = StoreFav(entity: entity5, insertInto: self.managedContext)
@@ -223,17 +229,14 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
                     store.id = Int64(i.store.id)
                 let stores = StoresFav(entity: entity6, insertInto: self.managedContext)
                    stores.store = store
-                let mutableStores = videogame.stores?.mutableCopy() as! NSMutableSet
+                
                 mutableStores.add(stores)
-                videogame.stores = mutableStores as NSSet
-                // el problema que tengo es que despues de hacer esto no sabria acceder al store que almaceno dentro de stores
+                
                }
+                videogame.stores = mutableStores as NSSet
             }
             self.coreDataStack.saveContext()
-   
-   
             self.videogamesFav.append(videogame)
-           //  print(videogamesFav)
                 }
         })
         
