@@ -15,11 +15,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" fixedFrame="YES" text="" translatesAutoresizingMaskIntoConstraints="NO" id="Ces-ar-6Vc">
-                                <rect key="frame" x="0.0" y="97" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bXi-rU-ojX">
                                 <rect key="frame" x="0.0" y="141" width="375" height="526"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -108,6 +103,11 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="I70-Az-Z0d"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" fixedFrame="YES" text="" translatesAutoresizingMaskIntoConstraints="NO" id="Ces-ar-6Vc">
+                                <rect key="frame" x="0.0" y="97" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -252,7 +252,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2dT-1D-xR0"/>
                     </view>
-                    <navigationItem key="navigationItem" id="co6-7j-BzM"/>
                     <connections>
                         <outlet property="nextBtn" destination="aPF-OR-J2j" id="lZC-SC-fEk"/>
                         <outlet property="previousBtn" destination="6NB-px-X5e" id="Qlh-Ys-ZyP"/>
@@ -263,7 +262,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0wF-qb-lfv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="988" y="-468"/>
+            <point key="canvasLocation" x="1033" y="-411"/>
         </scene>
         <!--Hidden Table-->
         <scene sceneID="iXH-nb-fmy">
@@ -316,10 +315,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JIC-mV-Vpd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1929" y="144"/>
+            <point key="canvasLocation" x="1926" y="136"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dWF-Qd-tOq"/>
+        <segue reference="PcQ-xq-901"/>
     </inferredMetricsTieBreakers>
 </document>

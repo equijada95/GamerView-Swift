@@ -30,6 +30,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var playerViewController = AVPlayerViewController()
     var platformsFav : [PlatformsFav]? = []
     var storesFav : [StoresFav]? = []
+    
+    var refresher = UIRefreshControl()
  
     var managedContext: NSManagedObjectContext!
     {
@@ -46,26 +48,42 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return formatter
     }()
     
+    let favFetchRequest = NSFetchRequest<VideogameFav>(entityName: "VideogameFav")
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         searchBar.delegate = self
         
-        let favFetchRequest = NSFetchRequest<VideogameFav>(entityName: "VideogameFav")
+        self.retrieveFavorites()
         
-                do
-                {
-                    videogames = try managedContext.fetch(favFetchRequest)
-                }
-                catch
-                {
-                    print("Error fetching videogames: \(error)")
-                }
-        tableView.reloadData()
+        tableView.addSubview(refresher)
+        refresher.addTarget(self, action: #selector(refreshing), for: .valueChanged)
     }
     
     @IBOutlet weak var searchBar: UISearchBar!
+    
+    func retrieveFavorites()
+    {
+        do
+        {
+            videogames = try managedContext.fetch(favFetchRequest)
+        }
+        catch
+        {
+            print("Error fetching videogames: \(error)")
+        }
+    }
+    
+    
+    @objc func refreshing()
+    {
+        self.retrieveFavorites()
+        tableView.reloadData()
+        refresher.endRefreshing()
+    }
     
     
     func searchGames(name: String, page: Int)
@@ -137,7 +155,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // MARK: UITableViewDelegate methods
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print(videogames[indexPath.section])
+        let alertview = UIAlertController(title:"Delete from Favorites?",message:"Do you want to delete this video game to favorites?",preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let actionOk = UIAlertAction(title: "Ok", style: .destructive, handler: {(accion) in
+            let videogame = self.videogames[indexPath.row]
+            self.managedContext.delete(videogame)
+            self.coreDataStack.saveContext()
+            self.videogames.remove(at: indexPath.row)
+            tableView.reloadData()
+            })
+            
+        alertview.addAction(actionOk)
+        alertview.addAction(cancelAction)
+        self.present(alertview, animated: true, completion: nil)
     }
     
     func getPlatforms(cell: MyCustomCell) {
