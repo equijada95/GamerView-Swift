@@ -124,8 +124,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "favCell", for: indexPath) as! MyCustomCell
             
             cell.nameLabel.text = videogames[indexPath.row].name
-            cell.ratingLabel.text = String (videogames[indexPath.row].rating )
-            cell.dateLabel.text = dateFormatter.string(from: videogames[indexPath.row].date!)
+            let rating = String (videogames[indexPath.row].rating )
+            cell.ratingLabel.text = "Rating: \(rating)"
+            let date = dateFormatter.string(from: videogames[indexPath.row].date!)
+                
+            cell.dateLabel.text = "Date it was added: \(date)"
     
     
            let url = videogames[indexPath.row].image

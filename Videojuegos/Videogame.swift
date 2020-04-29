@@ -28,11 +28,5 @@ struct Videogame : Codable
         case clip = "clip"
         }
     
-    // esta es la clase para codearlo, no la de core data
 
 }
-
-//extension StructDecoder {
-//    func toCoreData(context: NSManagedObjectContext) throws -> NSManagedObject {
-//    }
-//}
