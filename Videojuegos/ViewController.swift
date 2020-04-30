@@ -65,6 +65,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var searchBar: UISearchBar!
     
+    // MARK: Retrieving Favorites
+    
     func retrieveFavorites()
     {
         do
@@ -85,6 +87,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         refresher.endRefreshing()
     }
     
+    // MARK: Search Videogames for TableViewController
     
     func searchGames(name: String, page: Int)
     {
@@ -120,35 +123,30 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     }
     
+    // MARK: UITableViewDataSource methods
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "favCell", for: indexPath) as! MyCustomCell
-            
             cell.nameLabel.text = videogames[indexPath.row].name
             let rating = String (videogames[indexPath.row].rating )
             cell.ratingLabel.text = "Rating: \(rating)"
             let date = dateFormatter.string(from: videogames[indexPath.row].date!)
                 
             cell.dateLabel.text = "Date it was added: \(date)"
-    
-    
-           let url = videogames[indexPath.row].image
-           if(url != nil){
-    
-            cell.imageVideogame.image = image.getImage(urlString: url!).image
+            let url = videogames[indexPath.row].image
+            if(url != nil){
+                cell.imageVideogame.image = image.getImage(urlString: url!).image
            }
         
-            cell.cellDelegate = self
+        cell.cellDelegate = self
     
             
-            return cell
+        return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return videogames.count
     }
-    
-    
-    
     
     
     private func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> VideogameFav? {
@@ -161,17 +159,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let alertview = UIAlertController(title:"Delete from Favorites?",message:"Do you want to delete this video game to favorites?",preferredStyle: .alert)
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         let actionOk = UIAlertAction(title: "Ok", style: .destructive, handler: {(accion) in
-            let videogame = self.videogames[indexPath.row]
-            self.managedContext.delete(videogame)
-            self.coreDataStack.saveContext()
-            self.videogames.remove(at: indexPath.row)
-            tableView.reloadData()
+            self.deleteFav(indexPath: indexPath)
             })
             
         alertview.addAction(actionOk)
         alertview.addAction(cancelAction)
         self.present(alertview, animated: true, completion: nil)
     }
+    
+    func deleteFav(indexPath: IndexPath)
+    {
+        let videogame = self.videogames[indexPath.row]
+        self.managedContext.delete(videogame)
+        self.coreDataStack.saveContext()
+        self.videogames.remove(at: indexPath.row)
+        tableView.reloadData()
+    }
+    
+    // MARK: Videogame's Buttons
     
     func getPlatforms(cell: MyCustomCell) {
         if let indexPath = cell.getIndexPath(){
@@ -223,6 +228,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     
 }
+
+// MARK: UISearchBarDelegate
 
 extension ViewController: UISearchBarDelegate {
   func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {

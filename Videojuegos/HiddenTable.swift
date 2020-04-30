@@ -19,6 +19,8 @@ class HiddenTable: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     
     
+    // MARK: UITableViewDataSource methods
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "hiddenViewCell", for: indexPath) as! HiddenCell
             if(platforms.count > 0){
@@ -30,10 +32,10 @@ class HiddenTable: UIViewController, UITableViewDelegate, UITableViewDataSource
             if(platformsFav.count > 0){
                     cell.nameLabel.text = platformsFav[indexPath.row].platform?.name
                 }
-        if(storesFav.count > 0){
-            cell.nameLabel.text = storesFav[indexPath.row].store?.name
-        }
-            return cell
+            if(storesFav.count > 0){
+                cell.nameLabel.text = storesFav[indexPath.row].store?.name
+            }
+        return cell
     }
     
     
@@ -76,16 +78,16 @@ class HiddenTable: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if(platforms.count > 0){
-            print(platforms[indexPath.section].platform)
+            print(platforms[indexPath.row].platform)
         }
         if(stores.count > 0){
-            print(stores[indexPath.section].store)
+            print(stores[indexPath.row].store)
         }
         if(platformsFav.count > 0){
-            print(platformsFav[indexPath.section].platform)
+            print(platformsFav[indexPath.row].platform as Any)
         }
         if(storesFav.count > 0){
-            print(storesFav[indexPath.section].store)
+            print(storesFav[indexPath.row].store as Any)
         }
     }
     

@@ -52,21 +52,21 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLD-rT-4db">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LLD-rT-4db">
                                                             <rect key="frame" x="0.0" y="173.5" width="374" height="30.5"/>
                                                             <state key="normal" title="Digital Stores"/>
                                                             <connections>
                                                                 <action selector="getStores:" destination="4nv-67-w7f" eventType="touchUpInside" id="Nw3-EO-rIo"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29x-Q8-umU">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29x-Q8-umU">
                                                             <rect key="frame" x="0.0" y="204" width="374" height="30"/>
                                                             <state key="normal" title="Platforms"/>
                                                             <connections>
                                                                 <action selector="getPlatforms:" destination="4nv-67-w7f" eventType="touchUpInside" id="lK2-XM-fyD"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8he-R8-99n">
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8he-R8-99n">
                                                             <rect key="frame" x="0.0" y="234" width="374" height="30"/>
                                                             <state key="normal" title="Trailer"/>
                                                             <connections>
@@ -81,7 +81,11 @@
                                                         </label>
                                                     </subviews>
                                                     <constraints>
+                                                        <constraint firstItem="LLD-rT-4db" firstAttribute="leading" secondItem="KRD-hr-BXx" secondAttribute="leading" id="22e-xJ-V7D"/>
+                                                        <constraint firstAttribute="trailing" secondItem="LLD-rT-4db" secondAttribute="trailing" id="T45-la-Gwi"/>
                                                         <constraint firstItem="E4O-bW-lyl" firstAttribute="leading" secondItem="Eeu-zN-LDW" secondAttribute="leading" id="fvY-1f-zgu"/>
+                                                        <constraint firstItem="LLD-rT-4db" firstAttribute="top" secondItem="KRD-hr-BXx" secondAttribute="top" constant="173.5" id="hvx-cR-cXC"/>
+                                                        <constraint firstAttribute="bottom" secondItem="LLD-rT-4db" secondAttribute="bottom" constant="74.5" id="qmv-QW-NYI"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
@@ -142,14 +146,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" id="X85-ch-XUV" customClass="MyCustomCell" customModule="Videojuegos" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="264"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="265"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X85-ch-XUV" id="68B-zF-95i">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="264"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="265"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="agf-JC-UeI">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="264"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="265"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AxX-Q5-GMa">
                                                             <rect key="frame" x="0.0" y="0.0" width="375" height="135"/>
@@ -170,22 +174,22 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEn-NQ-nA8">
-                                                            <rect key="frame" x="0.0" y="173.5" width="375" height="30"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEn-NQ-nA8">
+                                                            <rect key="frame" x="0.0" y="173.5" width="375" height="31"/>
                                                             <state key="normal" title="Digital Stores"/>
                                                             <connections>
                                                                 <action selector="getStores:" destination="X85-ch-XUV" eventType="touchUpInside" id="Wyg-aI-BaG"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0g-C1-fcb">
-                                                            <rect key="frame" x="0.0" y="203.5" width="375" height="30"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0g-C1-fcb">
+                                                            <rect key="frame" x="0.0" y="204" width="375" height="30"/>
                                                             <state key="normal" title="Platforms"/>
                                                             <connections>
                                                                 <action selector="getPlatforms:" destination="X85-ch-XUV" eventType="touchUpInside" id="uxo-Sr-kIn"/>
                                                             </connections>
                                                         </button>
-                                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCp-VN-64e">
-                                                            <rect key="frame" x="0.0" y="233.5" width="375" height="30.5"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCp-VN-64e">
+                                                            <rect key="frame" x="0.0" y="234" width="375" height="31"/>
                                                             <state key="normal" title="Trailer"/>
                                                             <connections>
                                                                 <action selector="playVideo:" destination="X85-ch-XUV" eventType="touchUpInside" id="2YK-uf-k47"/>
@@ -193,6 +197,14 @@
                                                         </button>
                                                     </subviews>
                                                     <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="BEn-NQ-nA8" secondAttribute="bottom" constant="60.5" id="HI9-o7-6et"/>
+                                                        <constraint firstItem="P0g-C1-fcb" firstAttribute="top" secondItem="agf-JC-UeI" secondAttribute="top" constant="204" id="TvQ-Jf-0IM"/>
+                                                        <constraint firstItem="P0g-C1-fcb" firstAttribute="leading" secondItem="agf-JC-UeI" secondAttribute="leading" id="VZC-Fc-iAc"/>
+                                                        <constraint firstItem="BEn-NQ-nA8" firstAttribute="leading" secondItem="agf-JC-UeI" secondAttribute="leading" id="Vfb-Di-rNz"/>
+                                                        <constraint firstItem="BEn-NQ-nA8" firstAttribute="top" secondItem="agf-JC-UeI" secondAttribute="top" constant="173.5" id="ZEW-Wj-J9y"/>
+                                                        <constraint firstAttribute="trailing" secondItem="BEn-NQ-nA8" secondAttribute="trailing" id="gco-PG-zc0"/>
+                                                        <constraint firstAttribute="trailing" secondItem="P0g-C1-fcb" secondAttribute="trailing" id="kEC-Kx-BWM"/>
+                                                        <constraint firstAttribute="bottom" secondItem="P0g-C1-fcb" secondAttribute="bottom" constant="31" id="mlu-Tq-Mxg"/>
                                                         <constraint firstItem="AxX-Q5-GMa" firstAttribute="leading" secondItem="Dhr-g6-urK" secondAttribute="leading" id="y1A-Zk-84r"/>
                                                     </constraints>
                                                 </stackView>
@@ -338,6 +350,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="PcQ-xq-901"/>
+        <segue reference="dWF-Qd-tOq"/>
     </inferredMetricsTieBreakers>
 </document>
