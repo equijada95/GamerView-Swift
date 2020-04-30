@@ -75,26 +75,25 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         if(sender == nextBtn){
             numPage = numPage + 1
-            checkNumPage()
-            apiRequest.alamoFire(for: nameSearch, for: numPage, completionHandler: {
-                search in
-                let items = search.results
-                self.videogames = items
-                self.tableView.reloadData()
-                })
+            searchVideogames(numPage: numPage)
             
             }
         if(sender == previousBtn){
             
             numPage = numPage - 1
-            checkNumPage()
-            apiRequest.alamoFire(for: nameSearch, for: numPage, completionHandler: {
-                search in
-                let items = search.results
-                self.videogames = items
-                self.tableView.reloadData()
-            })
+            searchVideogames(numPage: numPage)
         }
+    }
+    
+    func searchVideogames(numPage: Int)
+    {
+        checkNumPage()
+        apiRequest.alamoFire(for: nameSearch, for: numPage, completionHandler: {
+            search in
+            let items = search.results
+            self.videogames = items
+            self.tableView.reloadData()
+        })
     }
     
     func checkNumPage()
