@@ -75,17 +75,17 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         if(sender == nextBtn){
             numPage = numPage + 1
-            searchVideogames(numPage: numPage)
+            searchGames(numPage: numPage)
             
             }
         if(sender == previousBtn){
             
             numPage = numPage - 1
-            searchVideogames(numPage: numPage)
+            searchGames(numPage: numPage)
         }
     }
     
-    func searchVideogames(numPage: Int)
+    func searchGames(numPage: Int)
     {
         checkNumPage()
         apiRequest.alamoFire(for: nameSearch, for: numPage, completionHandler: {
@@ -173,7 +173,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 return false
             }
         }){
-            let alertview = UIAlertController(title:"Repeated Favorite",message:"This video game has beenpreviously added to favorites",preferredStyle: .alert)
+            let alertview = UIAlertController(title:"Repeated Favorite",message:"This video game has been previously added to favorites",preferredStyle: .alert)
             alertview.addAction(UIAlertAction(title:"Ok", style: .default, handler: nil))
                                 self.present(alertview, animated: true, completion: nil)
         }else{

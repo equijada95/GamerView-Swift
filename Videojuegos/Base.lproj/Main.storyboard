@@ -246,7 +246,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Pu-Bn-sq3">
-                                <rect key="frame" x="140" y="579" width="98" height="20.5"/>
+                                <rect key="frame" x="166.5" y="578.5" width="42" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -255,18 +255,17 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="1tG-9C-wSB" firstAttribute="top" secondItem="2dT-1D-xR0" secondAttribute="top" id="48P-7P-DY6"/>
-                            <constraint firstItem="aPF-OR-J2j" firstAttribute="leading" secondItem="4Pu-Bn-sq3" secondAttribute="trailing" constant="53" id="79u-dL-38H"/>
+                            <constraint firstItem="4Pu-Bn-sq3" firstAttribute="centerX" secondItem="2dT-1D-xR0" secondAttribute="centerX" id="9IK-Fm-mat"/>
                             <constraint firstItem="1tG-9C-wSB" firstAttribute="leading" secondItem="2dT-1D-xR0" secondAttribute="leading" id="ATB-og-QTX"/>
+                            <constraint firstItem="2dT-1D-xR0" firstAttribute="bottom" secondItem="4Pu-Bn-sq3" secondAttribute="bottom" constant="48" id="AXN-2I-VPC"/>
                             <constraint firstItem="2dT-1D-xR0" firstAttribute="trailing" secondItem="1tG-9C-wSB" secondAttribute="trailing" id="ETS-Nn-NN7"/>
-                            <constraint firstItem="4Pu-Bn-sq3" firstAttribute="top" secondItem="1tG-9C-wSB" secondAttribute="bottom" constant="43" id="KiN-FG-1Ar"/>
+                            <constraint firstItem="4Pu-Bn-sq3" firstAttribute="top" secondItem="1tG-9C-wSB" secondAttribute="bottom" constant="42.5" id="FkB-aP-mU9"/>
                             <constraint firstItem="aPF-OR-J2j" firstAttribute="top" secondItem="1tG-9C-wSB" secondAttribute="bottom" constant="38" id="NVq-7a-rQ1"/>
-                            <constraint firstItem="4Pu-Bn-sq3" firstAttribute="leading" secondItem="2dT-1D-xR0" secondAttribute="leading" constant="140" id="WDJ-ki-4rK"/>
-                            <constraint firstItem="4Pu-Bn-sq3" firstAttribute="leading" secondItem="6NB-px-X5e" secondAttribute="trailing" constant="43" id="aNR-1b-jwq"/>
+                            <constraint firstItem="2dT-1D-xR0" firstAttribute="trailing" secondItem="6NB-px-X5e" secondAttribute="trailing" constant="278" id="bKh-UH-3c9"/>
                             <constraint firstItem="6NB-px-X5e" firstAttribute="leading" secondItem="2dT-1D-xR0" secondAttribute="leading" constant="38" id="bR3-Fp-KAc"/>
-                            <constraint firstItem="2dT-1D-xR0" firstAttribute="trailing" secondItem="4Pu-Bn-sq3" secondAttribute="trailing" constant="137" id="ccM-4n-quK"/>
                             <constraint firstItem="2dT-1D-xR0" firstAttribute="bottom" secondItem="aPF-OR-J2j" secondAttribute="bottom" constant="43" id="dNv-y5-dFy"/>
-                            <constraint firstItem="2dT-1D-xR0" firstAttribute="bottom" secondItem="4Pu-Bn-sq3" secondAttribute="bottom" constant="47.5" id="ddb-is-Vz6"/>
                             <constraint firstItem="2dT-1D-xR0" firstAttribute="trailing" secondItem="aPF-OR-J2j" secondAttribute="trailing" constant="52" id="ilM-0e-NgL"/>
+                            <constraint firstItem="aPF-OR-J2j" firstAttribute="leading" secondItem="2dT-1D-xR0" secondAttribute="leading" constant="291" id="jEI-Og-koO"/>
                             <constraint firstItem="6NB-px-X5e" firstAttribute="top" secondItem="1tG-9C-wSB" secondAttribute="bottom" constant="38" id="kZ7-6I-3HT"/>
                             <constraint firstItem="2dT-1D-xR0" firstAttribute="bottom" secondItem="6NB-px-X5e" secondAttribute="bottom" constant="43" id="z3M-gH-q2u"/>
                         </constraints>
