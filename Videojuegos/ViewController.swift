@@ -132,7 +132,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell.ratingLabel.text = "Rating: \(rating)"
             let date = dateFormatter.string(from: videogames[indexPath.row].date!)
                 
-            cell.dateLabel.text = "Date it was added: \(date)"
+            cell.dateLabel.text = "Added: \(date)"
             let url = videogames[indexPath.row].image
             if(url != nil){
                 cell.imageVideogame.image = image.getImage(urlString: url!).image

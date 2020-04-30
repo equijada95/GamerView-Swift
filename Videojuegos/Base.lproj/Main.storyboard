@@ -68,7 +68,7 @@
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8he-R8-99n">
                                                             <rect key="frame" x="0.0" y="234" width="374" height="30"/>
-                                                            <state key="normal" title="Trailer"/>
+                                                            <state key="normal" title="Clip"/>
                                                             <connections>
                                                                 <action selector="playVideo:" destination="4nv-67-w7f" eventType="touchUpInside" id="JQP-Fh-KOZ"/>
                                                             </connections>
@@ -190,7 +190,7 @@
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCp-VN-64e">
                                                             <rect key="frame" x="0.0" y="234" width="375" height="31"/>
-                                                            <state key="normal" title="Trailer"/>
+                                                            <state key="normal" title="Clip"/>
                                                             <connections>
                                                                 <action selector="playVideo:" destination="X85-ch-XUV" eventType="touchUpInside" id="2YK-uf-k47"/>
                                                             </connections>
@@ -350,6 +350,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="PcQ-xq-901"/>
+        <segue reference="dWF-Qd-tOq"/>
     </inferredMetricsTieBreakers>
 </document>
