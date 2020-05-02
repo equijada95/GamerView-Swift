@@ -21,7 +21,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bXi-rU-ojX">
-                                <rect key="frame" x="0.0" y="141" width="375" height="526"/>
+                                <rect key="frame" x="0.0" y="172" width="375" height="495"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favCell" id="4nv-67-w7f" customClass="MyCustomCell" customModule="Videojuegos" customModuleProvider="target">
@@ -114,13 +114,21 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="I70-Az-Z0d"/>
                                 </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorites" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8j-Ou-Kpu">
+                                <rect key="frame" x="154.5" y="149" width="66.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="bXi-rU-ojX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="141" id="TF4-DY-cr6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bXi-rU-ojX" secondAttribute="bottom" id="9OL-kA-RV2"/>
+                            <constraint firstItem="bXi-rU-ojX" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="172" id="VgD-51-wGB"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bXi-rU-ojX" secondAttribute="trailing" id="Wej-EO-Ru1"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="bXi-rU-ojX" secondAttribute="bottom" id="aaK-7i-EuK"/>
+                            <constraint firstItem="W8j-Ou-Kpu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="149" id="hla-HA-fmE"/>
                             <constraint firstItem="bXi-rU-ojX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="o8j-uR-XqG"/>
+                            <constraint firstItem="W8j-Ou-Kpu" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="uCm-R6-d9y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -345,6 +353,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="PcQ-xq-901"/>
+        <segue reference="dWF-Qd-tOq"/>
     </inferredMetricsTieBreakers>
 </document>
