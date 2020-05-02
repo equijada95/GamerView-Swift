@@ -25,14 +25,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="favCell" id="4nv-67-w7f" customClass="MyCustomCell" customModule="Videojuegos" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="278.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="279"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4nv-67-w7f" id="f24-Rg-FRw">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="278.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="279"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KRD-hr-BXx">
-                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="278.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="279"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E4O-bW-lyl">
                                                             <rect key="frame" x="0.0" y="0.0" width="374" height="135"/>
@@ -60,21 +60,21 @@
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29x-Q8-umU">
-                                                            <rect key="frame" x="0.0" y="204" width="374" height="30"/>
+                                                            <rect key="frame" x="0.0" y="204" width="374" height="30.5"/>
                                                             <state key="normal" title="Platforms"/>
                                                             <connections>
                                                                 <action selector="getPlatforms:" destination="4nv-67-w7f" eventType="touchUpInside" id="lK2-XM-fyD"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8he-R8-99n">
-                                                            <rect key="frame" x="0.0" y="234" width="374" height="30"/>
+                                                            <rect key="frame" x="0.0" y="234.5" width="374" height="30"/>
                                                             <state key="normal" title="Clip"/>
                                                             <connections>
                                                                 <action selector="playVideo:" destination="4nv-67-w7f" eventType="touchUpInside" id="JQP-Fh-KOZ"/>
                                                             </connections>
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uGf-Yf-UAA">
-                                                            <rect key="frame" x="0.0" y="264" width="374" height="14.5"/>
+                                                            <rect key="frame" x="0.0" y="264.5" width="374" height="14.5"/>
                                                             <fontDescription key="fontDescription" type="system" weight="thin" pointSize="12"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -82,10 +82,12 @@
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="LLD-rT-4db" firstAttribute="leading" secondItem="KRD-hr-BXx" secondAttribute="leading" id="22e-xJ-V7D"/>
+                                                        <constraint firstAttribute="trailing" secondItem="29x-Q8-umU" secondAttribute="trailing" id="3A1-Gk-RtR"/>
+                                                        <constraint firstItem="29x-Q8-umU" firstAttribute="top" secondItem="KRD-hr-BXx" secondAttribute="top" constant="204" id="E7N-00-FNm"/>
+                                                        <constraint firstAttribute="bottom" secondItem="29x-Q8-umU" secondAttribute="bottom" constant="44.5" id="L2U-60-KGJ"/>
                                                         <constraint firstAttribute="trailing" secondItem="LLD-rT-4db" secondAttribute="trailing" id="T45-la-Gwi"/>
                                                         <constraint firstItem="E4O-bW-lyl" firstAttribute="leading" secondItem="Eeu-zN-LDW" secondAttribute="leading" id="fvY-1f-zgu"/>
-                                                        <constraint firstItem="LLD-rT-4db" firstAttribute="top" secondItem="KRD-hr-BXx" secondAttribute="top" constant="173.5" id="hvx-cR-cXC"/>
-                                                        <constraint firstAttribute="bottom" secondItem="LLD-rT-4db" secondAttribute="bottom" constant="74.5" id="qmv-QW-NYI"/>
+                                                        <constraint firstItem="29x-Q8-umU" firstAttribute="leading" secondItem="KRD-hr-BXx" secondAttribute="leading" id="zLK-tI-j8J"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
@@ -146,14 +148,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCell" id="X85-ch-XUV" customClass="MyCustomCell" customModule="Videojuegos" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="265"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="264.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="X85-ch-XUV" id="68B-zF-95i">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="265"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="264.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="agf-JC-UeI">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="265"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="264.5"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AxX-Q5-GMa">
                                                             <rect key="frame" x="0.0" y="0.0" width="375" height="135"/>
@@ -175,21 +177,21 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BEn-NQ-nA8">
-                                                            <rect key="frame" x="0.0" y="173.5" width="375" height="31"/>
+                                                            <rect key="frame" x="0.0" y="173.5" width="375" height="30"/>
                                                             <state key="normal" title="Digital Stores"/>
                                                             <connections>
                                                                 <action selector="getStores:" destination="X85-ch-XUV" eventType="touchUpInside" id="Wyg-aI-BaG"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P0g-C1-fcb">
-                                                            <rect key="frame" x="0.0" y="204" width="375" height="30"/>
+                                                            <rect key="frame" x="0.0" y="203.5" width="375" height="30.5"/>
                                                             <state key="normal" title="Platforms"/>
                                                             <connections>
                                                                 <action selector="getPlatforms:" destination="X85-ch-XUV" eventType="touchUpInside" id="uxo-Sr-kIn"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCp-VN-64e">
-                                                            <rect key="frame" x="0.0" y="234" width="375" height="31"/>
+                                                            <rect key="frame" x="0.0" y="234" width="375" height="30.5"/>
                                                             <state key="normal" title="Clip"/>
                                                             <connections>
                                                                 <action selector="playVideo:" destination="X85-ch-XUV" eventType="touchUpInside" id="2YK-uf-k47"/>
@@ -197,15 +199,10 @@
                                                         </button>
                                                     </subviews>
                                                     <constraints>
-                                                        <constraint firstAttribute="bottom" secondItem="BEn-NQ-nA8" secondAttribute="bottom" constant="60.5" id="HI9-o7-6et"/>
-                                                        <constraint firstItem="P0g-C1-fcb" firstAttribute="top" secondItem="agf-JC-UeI" secondAttribute="top" constant="204" id="TvQ-Jf-0IM"/>
-                                                        <constraint firstItem="P0g-C1-fcb" firstAttribute="leading" secondItem="agf-JC-UeI" secondAttribute="leading" id="VZC-Fc-iAc"/>
-                                                        <constraint firstItem="BEn-NQ-nA8" firstAttribute="leading" secondItem="agf-JC-UeI" secondAttribute="leading" id="Vfb-Di-rNz"/>
-                                                        <constraint firstItem="BEn-NQ-nA8" firstAttribute="top" secondItem="agf-JC-UeI" secondAttribute="top" constant="173.5" id="ZEW-Wj-J9y"/>
-                                                        <constraint firstAttribute="trailing" secondItem="BEn-NQ-nA8" secondAttribute="trailing" id="gco-PG-zc0"/>
-                                                        <constraint firstAttribute="trailing" secondItem="P0g-C1-fcb" secondAttribute="trailing" id="kEC-Kx-BWM"/>
-                                                        <constraint firstAttribute="bottom" secondItem="P0g-C1-fcb" secondAttribute="bottom" constant="31" id="mlu-Tq-Mxg"/>
-                                                        <constraint firstItem="AxX-Q5-GMa" firstAttribute="leading" secondItem="Dhr-g6-urK" secondAttribute="leading" id="y1A-Zk-84r"/>
+                                                        <constraint firstAttribute="bottom" secondItem="P0g-C1-fcb" secondAttribute="bottom" constant="30.5" id="0L9-BL-D7p"/>
+                                                        <constraint firstAttribute="trailing" secondItem="P0g-C1-fcb" secondAttribute="trailing" id="TjO-ab-JIg"/>
+                                                        <constraint firstItem="P0g-C1-fcb" firstAttribute="top" secondItem="agf-JC-UeI" secondAttribute="top" constant="203.5" id="r38-9b-MMU"/>
+                                                        <constraint firstItem="P0g-C1-fcb" firstAttribute="leading" secondItem="agf-JC-UeI" secondAttribute="leading" id="xpe-lh-L9v"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
@@ -295,18 +292,18 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="hiddenViewCell" id="ydp-AR-Cxg" customClass="HiddenCell" customModule="Videojuegos" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="hiddenViewCell" rowHeight="33" id="ydp-AR-Cxg" customClass="HiddenCell" customModule="Videojuegos" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="33"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ydp-AR-Cxg" id="88L-JB-wPL">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="33"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="P9V-o1-8Tg">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="P9V-o1-8Tg">
+                                                    <rect key="frame" x="13.5" y="11" width="42" height="19.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G1y-fc-NUX">
-                                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="42" height="19.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -314,13 +311,12 @@
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="P9V-o1-8Tg" firstAttribute="leading" secondItem="88L-JB-wPL" secondAttribute="leading" constant="13.5" id="KKh-RS-4au"/>
+                                                <constraint firstItem="P9V-o1-8Tg" firstAttribute="top" secondItem="88L-JB-wPL" secondAttribute="top" constant="11" id="bqz-74-8F5"/>
+                                                <constraint firstAttribute="bottom" secondItem="P9V-o1-8Tg" secondAttribute="bottom" constant="2.5" id="sa8-OU-UY2"/>
+                                            </constraints>
                                         </tableViewCellContentView>
-                                        <constraints>
-                                            <constraint firstItem="P9V-o1-8Tg" firstAttribute="top" secondItem="ydp-AR-Cxg" secondAttribute="top" id="977-n7-TTo"/>
-                                            <constraint firstAttribute="trailing" secondItem="P9V-o1-8Tg" secondAttribute="trailing" id="DbX-2P-7t3"/>
-                                            <constraint firstAttribute="bottom" secondItem="P9V-o1-8Tg" secondAttribute="bottom" id="eIE-Tj-nkm"/>
-                                            <constraint firstItem="P9V-o1-8Tg" firstAttribute="leading" secondItem="ydp-AR-Cxg" secondAttribute="leading" id="n1c-vA-WOv"/>
-                                        </constraints>
                                         <connections>
                                             <outlet property="nameLabel" destination="G1y-fc-NUX" id="QW5-cJ-EZg"/>
                                         </connections>
