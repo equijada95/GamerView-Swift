@@ -75,14 +75,12 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
         
         if(sender == nextBtn){
             numPage = numPage + 1
-            searchGames(numPage: numPage)
-            
             }
         if(sender == previousBtn){
             
             numPage = numPage - 1
-            searchGames(numPage: numPage)
         }
+        searchGames(numPage: numPage)
     }
     
     func searchGames(numPage: Int)

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -21,35 +21,14 @@
 		3A8E661F24251D50007E2F51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8E661D24251D50007E2F51 /* Main.storyboard */; };
 		3A8E662124251D51007E2F51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8E662024251D51007E2F51 /* Assets.xcassets */; };
 		3A8E662424251D51007E2F51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8E662224251D51007E2F51 /* LaunchScreen.storyboard */; };
-		3A8E662F24251D51007E2F51 /* VideojuegosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8E662E24251D51007E2F51 /* VideojuegosTests.swift */; };
-		3A8E663A24251D51007E2F51 /* VideojuegosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8E663924251D51007E2F51 /* VideojuegosUITests.swift */; };
 		3AD7789E244510F2002CC274 /* Clip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD7789D244510F2002CC274 /* Clip.swift */; };
 		3AE4B43D2433787000361EDB /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE4B43C2433787000361EDB /* Image.swift */; };
 		3AE4B44A243656C600361EDB /* HiddenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE4B449243656C600361EDB /* HiddenCell.swift */; };
 		3AEF0A4E242B802500345698 /* ApiRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AEF0A4D242B802500345698 /* ApiRequests.swift */; };
 		3AFFCD09242D2E090000D478 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFFCD08242D2E090000D478 /* Search.swift */; };
 		3AFFCD0B242D2EB00000D478 /* Videogame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFFCD0A242D2EB00000D478 /* Videogame.swift */; };
-		48573C0CA44F1C9886640482 /* Pods_Videojuegos_VideojuegosUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 26D02F9A821189295F661B7B /* Pods_Videojuegos_VideojuegosUITests.framework */; };
-		855554BF77D58A4BA07908FA /* Pods_VideojuegosTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3D4ACA15656FE07450D0268 /* Pods_VideojuegosTests.framework */; };
 		E12E72A8A5A78C2802EEB025 /* Pods_Videojuegos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13B47D0ADF942D160EF28117 /* Pods_Videojuegos.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		3A8E662B24251D51007E2F51 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3A8E660C24251D50007E2F51 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3A8E661324251D50007E2F51;
-			remoteInfo = Videojuegos;
-		};
-		3A8E663624251D51007E2F51 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3A8E660C24251D50007E2F51 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3A8E661324251D50007E2F51;
-			remoteInfo = Videojuegos;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		13B47D0ADF942D160EF28117 /* Pods_Videojuegos.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Videojuegos.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,13 +51,7 @@
 		3A8E662024251D51007E2F51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A8E662324251D51007E2F51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A8E662524251D51007E2F51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A8E662E24251D51007E2F51 /* VideojuegosTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideojuegosTests.swift; sourceTree = "<group>"; };
-		3A8E663024251D51007E2F51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A8E663924251D51007E2F51 /* VideojuegosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideojuegosUITests.swift; sourceTree = "<group>"; };
-		3A8E663B24251D51007E2F51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AD374D5245460BF00C43110 /* Videojuegos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Videojuegos.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3AD374D6245460BF00C43110 /* VideojuegosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideojuegosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3AD374D7245460BF00C43110 /* VideojuegosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideojuegosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD7789D244510F2002CC274 /* Clip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clip.swift; sourceTree = "<group>"; };
 		3AE4B43C2433787000361EDB /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		3AE4B449243656C600361EDB /* HiddenCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenCell.swift; sourceTree = "<group>"; };
@@ -101,22 +74,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3A8E662724251D51007E2F51 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				855554BF77D58A4BA07908FA /* Pods_VideojuegosTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3A8E663224251D51007E2F51 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				48573C0CA44F1C9886640482 /* Pods_Videojuegos_VideojuegosUITests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -130,7 +87,6 @@
 				1940D0DBA88032629FCC2A99 /* Pods-VideojuegosTests.debug.xcconfig */,
 				85834DAFF34059E92E363176 /* Pods-VideojuegosTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -138,11 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				3A8E661624251D50007E2F51 /* Videojuegos */,
-				3A8E662D24251D51007E2F51 /* VideojuegosTests */,
-				3A8E663824251D51007E2F51 /* VideojuegosUITests */,
 				3AD374D5245460BF00C43110 /* Videojuegos.app */,
-				3AD374D6245460BF00C43110 /* VideojuegosTests.xctest */,
-				3AD374D7245460BF00C43110 /* VideojuegosUITests.xctest */,
 				2422A09038E0616C69B4932D /* Pods */,
 				6E4D04A6E40F98C814B2C900 /* Frameworks */,
 			);
@@ -175,24 +127,6 @@
 				3A12FBA92453563C00567F3E /* Videogames.xcdatamodeld */,
 			);
 			path = Videojuegos;
-			sourceTree = "<group>";
-		};
-		3A8E662D24251D51007E2F51 /* VideojuegosTests */ = {
-			isa = PBXGroup;
-			children = (
-				3A8E662E24251D51007E2F51 /* VideojuegosTests.swift */,
-				3A8E663024251D51007E2F51 /* Info.plist */,
-			);
-			path = VideojuegosTests;
-			sourceTree = "<group>";
-		};
-		3A8E663824251D51007E2F51 /* VideojuegosUITests */ = {
-			isa = PBXGroup;
-			children = (
-				3A8E663924251D51007E2F51 /* VideojuegosUITests.swift */,
-				3A8E663B24251D51007E2F51 /* Info.plist */,
-			);
-			path = VideojuegosUITests;
 			sourceTree = "<group>";
 		};
 		3AD7789F24451433002CC274 /* Structs */ = {
@@ -234,45 +168,6 @@
 			productReference = 3AD374D5245460BF00C43110 /* Videojuegos.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3A8E662924251D51007E2F51 /* VideojuegosTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3A8E664124251D51007E2F51 /* Build configuration list for PBXNativeTarget "VideojuegosTests" */;
-			buildPhases = (
-				F52759A00FA7C309682DF91E /* [CP] Check Pods Manifest.lock */,
-				3A8E662624251D51007E2F51 /* Sources */,
-				3A8E662724251D51007E2F51 /* Frameworks */,
-				3A8E662824251D51007E2F51 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3A8E662C24251D51007E2F51 /* PBXTargetDependency */,
-			);
-			name = VideojuegosTests;
-			productName = VideojuegosTests;
-			productReference = 3AD374D6245460BF00C43110 /* VideojuegosTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		3A8E663424251D51007E2F51 /* VideojuegosUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3A8E664424251D51007E2F51 /* Build configuration list for PBXNativeTarget "VideojuegosUITests" */;
-			buildPhases = (
-				C40437583A5F0F5A08675D84 /* [CP] Check Pods Manifest.lock */,
-				3A8E663124251D51007E2F51 /* Sources */,
-				3A8E663224251D51007E2F51 /* Frameworks */,
-				3A8E663324251D51007E2F51 /* Resources */,
-				E8CE401368B3D863173F7E15 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3A8E663724251D51007E2F51 /* PBXTargetDependency */,
-			);
-			name = VideojuegosUITests;
-			productName = VideojuegosUITests;
-			productReference = 3AD374D7245460BF00C43110 /* VideojuegosUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -285,14 +180,6 @@
 				TargetAttributes = {
 					3A8E661324251D50007E2F51 = {
 						CreatedOnToolsVersion = 11.3.1;
-					};
-					3A8E662924251D51007E2F51 = {
-						CreatedOnToolsVersion = 11.3.1;
-						TestTargetID = 3A8E661324251D50007E2F51;
-					};
-					3A8E663424251D51007E2F51 = {
-						CreatedOnToolsVersion = 11.3.1;
-						TestTargetID = 3A8E661324251D50007E2F51;
 					};
 				};
 			};
@@ -310,8 +197,6 @@
 			projectRoot = "";
 			targets = (
 				3A8E661324251D50007E2F51 /* Videojuegos */,
-				3A8E662924251D51007E2F51 /* VideojuegosTests */,
-				3A8E663424251D51007E2F51 /* VideojuegosUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -324,20 +209,6 @@
 				3A8E662424251D51007E2F51 /* LaunchScreen.storyboard in Resources */,
 				3A8E662124251D51007E2F51 /* Assets.xcassets in Resources */,
 				3A8E661F24251D50007E2F51 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3A8E662824251D51007E2F51 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3A8E663324251D51007E2F51 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,67 +254,6 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Videojuegos/Pods-Videojuegos-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C40437583A5F0F5A08675D84 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Videojuegos-VideojuegosUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E8CE401368B3D863173F7E15 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Videojuegos-VideojuegosUITests/Pods-Videojuegos-VideojuegosUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Videojuegos-VideojuegosUITests/Pods-Videojuegos-VideojuegosUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Videojuegos-VideojuegosUITests/Pods-Videojuegos-VideojuegosUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F52759A00FA7C309682DF91E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-VideojuegosTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -471,36 +281,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3A8E662624251D51007E2F51 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3A8E662F24251D51007E2F51 /* VideojuegosTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3A8E663124251D51007E2F51 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3A8E663A24251D51007E2F51 /* VideojuegosUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		3A8E662C24251D51007E2F51 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3A8E661324251D50007E2F51 /* Videojuegos */;
-			targetProxy = 3A8E662B24251D51007E2F51 /* PBXContainerItemProxy */;
-		};
-		3A8E663724251D51007E2F51 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3A8E661324251D50007E2F51 /* Videojuegos */;
-			targetProxy = 3A8E663624251D51007E2F51 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3A8E661D24251D50007E2F51 /* Main.storyboard */ = {
@@ -672,90 +453,6 @@
 			};
 			name = Release;
 		};
-		3A8E664224251D51007E2F51 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1940D0DBA88032629FCC2A99 /* Pods-VideojuegosTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = VideojuegosTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = es.upsa.mimo.VideojuegosTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Videojuegos.app/Videojuegos";
-			};
-			name = Debug;
-		};
-		3A8E664324251D51007E2F51 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 85834DAFF34059E92E363176 /* Pods-VideojuegosTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = VideojuegosTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = es.upsa.mimo.VideojuegosTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Videojuegos.app/Videojuegos";
-			};
-			name = Release;
-		};
-		3A8E664524251D51007E2F51 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 93BF069270CC8A53AC5E7ADF /* Pods-Videojuegos-VideojuegosUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = VideojuegosUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = es.upsa.mimo.VideojuegosUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Videojuegos;
-			};
-			name = Debug;
-		};
-		3A8E664624251D51007E2F51 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 609EA085767B88E8DB9EE9C6 /* Pods-Videojuegos-VideojuegosUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = VideojuegosUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = es.upsa.mimo.VideojuegosUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = Videojuegos;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -773,24 +470,6 @@
 			buildConfigurations = (
 				3A8E663F24251D51007E2F51 /* Debug */,
 				3A8E664024251D51007E2F51 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3A8E664124251D51007E2F51 /* Build configuration list for PBXNativeTarget "VideojuegosTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3A8E664224251D51007E2F51 /* Debug */,
-				3A8E664324251D51007E2F51 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3A8E664424251D51007E2F51 /* Build configuration list for PBXNativeTarget "VideojuegosUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3A8E664524251D51007E2F51 /* Debug */,
-				3A8E664624251D51007E2F51 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
