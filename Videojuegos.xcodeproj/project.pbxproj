@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3A12FB8C2453497200567F3E /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A12FB8B2453497200567F3E /* CoreDataStack.swift */; };
-		3A12FBAC2453563C00567F3E /* Videogames.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3A12FBA92453563C00567F3E /* Videogames.xcdatamodeld */; };
 		3A150D92242E16D7001782B2 /* Platform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A150D91242E16D7001782B2 /* Platform.swift */; };
 		3A150D94242E1719001782B2 /* Platforms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A150D93242E1719001782B2 /* Platforms.swift */; };
 		3A150D96242E1768001782B2 /* Stores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A150D95242E1768001782B2 /* Stores.swift */; };
@@ -21,6 +20,7 @@
 		3A8E661F24251D50007E2F51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8E661D24251D50007E2F51 /* Main.storyboard */; };
 		3A8E662124251D51007E2F51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8E662024251D51007E2F51 /* Assets.xcassets */; };
 		3A8E662424251D51007E2F51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8E662224251D51007E2F51 /* LaunchScreen.storyboard */; };
+		3AC94B1E2460459500FE30A9 /* Videogames.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3AC94B1C2460459500FE30A9 /* Videogames.xcdatamodeld */; };
 		3AD7789E244510F2002CC274 /* Clip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD7789D244510F2002CC274 /* Clip.swift */; };
 		3AE4B43D2433787000361EDB /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE4B43C2433787000361EDB /* Image.swift */; };
 		3AE4B44A243656C600361EDB /* HiddenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE4B449243656C600361EDB /* HiddenCell.swift */; };
@@ -36,8 +36,6 @@
 		26D02F9A821189295F661B7B /* Pods_Videojuegos_VideojuegosUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Videojuegos_VideojuegosUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29987C3CB53877621A8DC979 /* Pods-Videojuegos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Videojuegos.debug.xcconfig"; path = "Target Support Files/Pods-Videojuegos/Pods-Videojuegos.debug.xcconfig"; sourceTree = "<group>"; };
 		3A12FB8B2453497200567F3E /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		3A12FBAA2453563C00567F3E /* Videogames.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Videogames.xcdatamodel; sourceTree = "<group>"; };
-		3A12FBAB2453563C00567F3E /* Videogames 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Videogames 2.xcdatamodel"; sourceTree = "<group>"; };
 		3A150D91242E16D7001782B2 /* Platform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platform.swift; sourceTree = "<group>"; };
 		3A150D93242E1719001782B2 /* Platforms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Platforms.swift; sourceTree = "<group>"; };
 		3A150D95242E1768001782B2 /* Stores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stores.swift; sourceTree = "<group>"; };
@@ -51,6 +49,7 @@
 		3A8E662024251D51007E2F51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A8E662324251D51007E2F51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A8E662524251D51007E2F51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AC94B1D2460459500FE30A9 /* Videogames.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Videogames.xcdatamodel; sourceTree = "<group>"; };
 		3AD374D5245460BF00C43110 /* Videojuegos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Videojuegos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD7789D244510F2002CC274 /* Clip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clip.swift; sourceTree = "<group>"; };
 		3AE4B43C2433787000361EDB /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
@@ -103,6 +102,7 @@
 		3A8E661624251D50007E2F51 /* Videojuegos */ = {
 			isa = PBXGroup;
 			children = (
+				3AC94B1C2460459500FE30A9 /* Videogames.xcdatamodeld */,
 				3AD7789F24451433002CC274 /* Structs */,
 				3AEF0A4D242B802500345698 /* ApiRequests.swift */,
 				3A8E661724251D50007E2F51 /* AppDelegate.swift */,
@@ -124,7 +124,6 @@
 				3AE4B43C2433787000361EDB /* Image.swift */,
 				3AE4B449243656C600361EDB /* HiddenCell.swift */,
 				3A48FFC524374DF600FFECA5 /* HiddenTable.swift */,
-				3A12FBA92453563C00567F3E /* Videogames.xcdatamodeld */,
 			);
 			path = Videojuegos;
 			sourceTree = "<group>";
@@ -270,7 +269,7 @@
 				3AD7789E244510F2002CC274 /* Clip.swift in Sources */,
 				3A12FB8C2453497200567F3E /* CoreDataStack.swift in Sources */,
 				3AEF0A4E242B802500345698 /* ApiRequests.swift in Sources */,
-				3A12FBAC2453563C00567F3E /* Videogames.xcdatamodeld in Sources */,
+				3AC94B1E2460459500FE30A9 /* Videogames.xcdatamodeld in Sources */,
 				3AE4B43D2433787000361EDB /* Image.swift in Sources */,
 				3AFFCD0B242D2EB00000D478 /* Videogame.swift in Sources */,
 				3A1BF3E0242A2B47000AC67A /* MyCustomCell.swift in Sources */,
@@ -477,13 +476,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		3A12FBA92453563C00567F3E /* Videogames.xcdatamodeld */ = {
+		3AC94B1C2460459500FE30A9 /* Videogames.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				3A12FBAA2453563C00567F3E /* Videogames.xcdatamodel */,
-				3A12FBAB2453563C00567F3E /* Videogames 2.xcdatamodel */,
+				3AC94B1D2460459500FE30A9 /* Videogames.xcdatamodel */,
 			);
-			currentVersion = 3A12FBAA2453563C00567F3E /* Videogames.xcdatamodel */;
+			currentVersion = 3AC94B1D2460459500FE30A9 /* Videogames.xcdatamodel */;
 			path = Videogames.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
