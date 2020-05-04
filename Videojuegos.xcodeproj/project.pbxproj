@@ -89,6 +89,50 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		3A3C58FF24608572000223BA /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				3A1BF3E3242A6D5A000AC67A /* TableViewController.swift */,
+				3A8E661B24251D50007E2F51 /* ViewController.swift */,
+				3A48FFC524374DF600FFECA5 /* HiddenTable.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		3A3C5900246085A1000223BA /* Multimedia */ = {
+			isa = PBXGroup;
+			children = (
+				3AE4B43C2433787000361EDB /* Image.swift */,
+				3A3C58FD246073E4000223BA /* VideoPlayer.swift */,
+			);
+			name = Multimedia;
+			sourceTree = "<group>";
+		};
+		3A3C5901246088B2000223BA /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3A1BF3DF242A2B47000AC67A /* MyCustomCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3A3C590224608CFF000223BA /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				3AC94B1C2460459500FE30A9 /* Videogames.xcdatamodeld */,
+				3A12FB8B2453497200567F3E /* CoreDataStack.swift */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
+		3A3C590324608D11000223BA /* ApiRequests */ = {
+			isa = PBXGroup;
+			children = (
+				3AEF0A4D242B802500345698 /* ApiRequests.swift */,
+			);
+			path = ApiRequests;
+			sourceTree = "<group>";
+		};
 		3A8E660B24251D50007E2F51 = {
 			isa = PBXGroup;
 			children = (
@@ -102,28 +146,17 @@
 		3A8E661624251D50007E2F51 /* Videojuegos */ = {
 			isa = PBXGroup;
 			children = (
-				3AC94B1C2460459500FE30A9 /* Videogames.xcdatamodeld */,
+				3A3C590324608D11000223BA /* ApiRequests */,
+				3A3C590224608CFF000223BA /* CoreData */,
+				3A3C5901246088B2000223BA /* Cells */,
+				3A3C5900246085A1000223BA /* Multimedia */,
+				3A3C58FF24608572000223BA /* ViewControllers */,
 				3AD7789F24451433002CC274 /* Structs */,
-				3AEF0A4D242B802500345698 /* ApiRequests.swift */,
 				3A8E661724251D50007E2F51 /* AppDelegate.swift */,
-				3A12FB8B2453497200567F3E /* CoreDataStack.swift */,
 				3A8E662024251D51007E2F51 /* Assets.xcassets */,
 				3A8E662524251D51007E2F51 /* Info.plist */,
 				3A8E662224251D51007E2F51 /* LaunchScreen.storyboard */,
-				3A150D91242E16D7001782B2 /* Platform.swift */,
-				3A150D93242E1719001782B2 /* Platforms.swift */,
-				3AFFCD08242D2E090000D478 /* Search.swift */,
-				3A150D97242E1778001782B2 /* Store.swift */,
-				3A150D95242E1768001782B2 /* Stores.swift */,
-				3AFFCD0A242D2EB00000D478 /* Videogame.swift */,
-				3AD7789D244510F2002CC274 /* Clip.swift */,
 				3A8E661D24251D50007E2F51 /* Main.storyboard */,
-				3A1BF3DF242A2B47000AC67A /* MyCustomCell.swift */,
-				3A1BF3E3242A6D5A000AC67A /* TableViewController.swift */,
-				3A8E661B24251D50007E2F51 /* ViewController.swift */,
-				3AE4B43C2433787000361EDB /* Image.swift */,
-				3A48FFC524374DF600FFECA5 /* HiddenTable.swift */,
-				3A3C58FD246073E4000223BA /* VideoPlayer.swift */,
 			);
 			path = Videojuegos;
 			sourceTree = "<group>";
@@ -131,6 +164,13 @@
 		3AD7789F24451433002CC274 /* Structs */ = {
 			isa = PBXGroup;
 			children = (
+				3A150D91242E16D7001782B2 /* Platform.swift */,
+				3A150D93242E1719001782B2 /* Platforms.swift */,
+				3AFFCD08242D2E090000D478 /* Search.swift */,
+				3A150D97242E1778001782B2 /* Store.swift */,
+				3A150D95242E1768001782B2 /* Stores.swift */,
+				3AFFCD0A242D2EB00000D478 /* Videogame.swift */,
+				3AD7789D244510F2002CC274 /* Clip.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";

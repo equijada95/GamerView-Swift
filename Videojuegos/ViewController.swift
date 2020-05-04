@@ -86,6 +86,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.retrieveFavorites()
         tableView.reloadData()
         refresher.endRefreshing()
+        tableView.keyboardDismissMode = .onDrag
+        
     }
     
     // MARK: Search Videogames for TableViewController
@@ -241,5 +243,6 @@ extension ViewController: UISearchBarDelegate {
   func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
     searchBar.text = nil
     searchBar.resignFirstResponder()
+    
   }
 }
