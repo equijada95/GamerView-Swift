@@ -22,7 +22,7 @@ class HiddenTable: UIViewController, UITableViewDelegate, UITableViewDataSource
     // MARK: UITableViewDataSource methods
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "hiddenViewCell", for: indexPath) as! HiddenCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "hiddenViewCell", for: indexPath) as! MyCustomCell
             if(platforms.count > 0){
                 cell.nameLabel.text = platforms[indexPath.row].platform.name
             }
