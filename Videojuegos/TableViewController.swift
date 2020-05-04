@@ -21,9 +21,9 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var platforms: [Platforms]? = []
     var stores: [Stores]? = []
     var urlVideo : String = ""
-    var playerViewController = AVPlayerViewController()
     
     var apiRequest = ApiRequests()
+    let player = VideoPlayer()
     var nameSearch = ""
     var numPage = 0
     var numResults = 0
@@ -287,15 +287,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
             if videogames[indexPath.row].clip?.clip != nil {
                 urlVideo = videogames[indexPath.row].clip!.clip
             
-                let videoURL = URL(string: urlVideo)
-                let player = AVPlayer(url: videoURL!)
-                playerViewController.player = player
-                do {
-                    try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [])
-                }
-                catch {
-                    print("Setting category to AVAudioSessionCategoryPlayback failed.")
-                }
+                let playerViewController = player.playVideo(urlVideo: urlVideo)
                 
                 self.present(playerViewController, animated: true, completion: nil)
             }
