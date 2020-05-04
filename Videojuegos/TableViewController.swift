@@ -290,6 +290,12 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 let videoURL = URL(string: urlVideo)
                 let player = AVPlayer(url: videoURL!)
                 playerViewController.player = player
+                do {
+                    try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default, options: [])
+                }
+                catch {
+                    print("Setting category to AVAudioSessionCategoryPlayback failed.")
+                }
                 
                 self.present(playerViewController, animated: true, completion: nil)
             }

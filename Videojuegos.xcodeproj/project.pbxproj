@@ -49,7 +49,7 @@
 		3A8E662324251D51007E2F51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A8E662524251D51007E2F51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3AC94B1D2460459500FE30A9 /* Videogames.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Videogames.xcdatamodel; sourceTree = "<group>"; };
-		3AD374D5245460BF00C43110 /* Videojuegos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Videojuegos.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AD374D5245460BF00C43110 /* GamerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GamerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AD7789D244510F2002CC274 /* Clip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clip.swift; sourceTree = "<group>"; };
 		3AE4B43C2433787000361EDB /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		3AEF0A4D242B802500345698 /* ApiRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRequests.swift; sourceTree = "<group>"; };
@@ -91,7 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				3A8E661624251D50007E2F51 /* Videojuegos */,
-				3AD374D5245460BF00C43110 /* Videojuegos.app */,
+				3AD374D5245460BF00C43110 /* GamerView.app */,
 				2422A09038E0616C69B4932D /* Pods */,
 				6E4D04A6E40F98C814B2C900 /* Frameworks */,
 			);
@@ -161,7 +161,7 @@
 			);
 			name = Videojuegos;
 			productName = Videojuegos;
-			productReference = 3AD374D5245460BF00C43110 /* Videojuegos.app */;
+			productReference = 3AD374D5245460BF00C43110 /* GamerView.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -418,13 +418,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A5UCFNWB8C;
 				INFOPLIST_FILE = Videojuegos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = es.upsa.mimo.Videojuegos;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = es.upsa.mimo.GamerView;
+				PRODUCT_NAME = GamerView;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -436,13 +437,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A5UCFNWB8C;
 				INFOPLIST_FILE = Videojuegos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = es.upsa.mimo.Videojuegos;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = es.upsa.mimo.GamerView;
+				PRODUCT_NAME = GamerView;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
