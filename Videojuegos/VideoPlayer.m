@@ -6,7 +6,6 @@
 //  Copyright © 2020 MIMO. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 #import <AVKit/AVKit.h>
@@ -22,7 +21,6 @@
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error:nil];
     return playerViewController;
 }
-
 
 @end
 

@@ -23,7 +23,6 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     var urlVideo : String = ""
     
     var apiRequest = ApiRequests()
-    let player = VideoPlayer()
     var nameSearch = ""
     var numPage = 0
     var numResults = 0

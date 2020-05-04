@@ -74,21 +74,5 @@ class HiddenTable: UIViewController, UITableViewDelegate, UITableViewDataSource
         return nil
     }
     
-    // MARK: UITableViewDelegate methods
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if(platforms.count > 0){
-            print(platforms[indexPath.row].platform)
-        }
-        if(stores.count > 0){
-            print(stores[indexPath.row].store)
-        }
-        if(platformsFav.count > 0){
-            print(platformsFav[indexPath.row].platform as Any)
-        }
-        if(storesFav.count > 0){
-            print(storesFav[indexPath.row].store as Any)
-        }
-    }
     
 }

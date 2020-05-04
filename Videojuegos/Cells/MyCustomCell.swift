@@ -26,11 +26,11 @@ class MyCustomCell : UITableViewCell
     @IBOutlet weak var btnPlayVideo: UIButton!
     
     
-    @IBAction func getPlatforms(_ sender: UIButton) {
+    @IBAction func getPlatforms(_ sender: Any) {
         cellDelegate?.getPlatforms(cell: self)
     }
     
-    @IBAction func playVideo(_ sender: UIButton) {
+    @IBAction func playVideo(_ sender: Any) {
         cellDelegate?.playVideo(cell: self)
     }
     

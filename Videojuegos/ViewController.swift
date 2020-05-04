@@ -25,8 +25,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var coreDataStack : CoreDataStack!
     
-    let player = VideoPlayer()
-    
     var videogames : [VideogameFav] = []
     var urlVideo : String = ""
     var platformsFav : [PlatformsFav]? = []
