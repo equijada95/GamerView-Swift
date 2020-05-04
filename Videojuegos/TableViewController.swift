@@ -294,7 +294,7 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
                 self.present(playerViewController, animated: true, completion: nil)
             }
             else {
-                let alertview = UIAlertController(title:"Trailer not found",message:"Sorry but trailer was not found for this videogame",preferredStyle: .alert)
+                let alertview = UIAlertController(title:"Clip not found",message:"Sorry but clip was not found for this videogame",preferredStyle: .alert)
                 alertview.addAction(UIAlertAction(title:"Ok", style: .default, handler: nil))
                 self.present(alertview, animated: true, completion: nil)
             }

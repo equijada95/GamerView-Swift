@@ -185,7 +185,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     self.performSegue(withIdentifier: "hiddenViewTable", sender: self)
                     platformsFav = []
                 } else{
-                    let alertview = UIAlertController(title:"Platforms not found",message:"Sorry but no platforms found for this videogame",preferredStyle: .alert)
+                    let alertview = UIAlertController(title:"Platforms not found",message:"Sorry but platforms were not found for this videogame",preferredStyle: .alert)
                     alertview.addAction(UIAlertAction(title:"Ok", style: .default, handler: nil))
                     self.present(alertview, animated: true, completion: nil)
                 }
@@ -205,7 +205,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 self.present(playerViewController, animated: true, completion: nil)
             }
             else {
-                let alertview = UIAlertController(title:"Trailer not found",message:"Sorry but no trailer found for this videogame",preferredStyle: .alert)
+                let alertview = UIAlertController(title:"Clip not found",message:"Sorry but clip was not found for this videogame",preferredStyle: .alert)
                 alertview.addAction(UIAlertAction(title:"Ok", style: .default, handler: nil))
                 self.present(alertview, animated: true, completion: nil)
             }
@@ -219,7 +219,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     self.performSegue(withIdentifier: "hiddenViewTable", sender: self)
                     storesFav = []
                 } else{
-                    let alertview = UIAlertController(title:"Stores not found",message:"Sorry but no stores found for this videogame",preferredStyle: .alert)
+                    let alertview = UIAlertController(title:"Stores not found",message:"Sorry but stores were not found for this videogame",preferredStyle: .alert)
                     alertview.addAction(UIAlertAction(title:"Ok", style: .default, handler: nil))
                     self.present(alertview, animated: true, completion: nil)
                 }
