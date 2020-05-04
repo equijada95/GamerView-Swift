@@ -8,7 +8,6 @@
 
 import UIKit
 import Kingfisher
-import KingfisherSwiftUI
 
 class Image: UIImageView
 {
