@@ -14,7 +14,7 @@
 		3A150D98242E1778001782B2 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A150D97242E1778001782B2 /* Store.swift */; };
 		3A1BF3E0242A2B47000AC67A /* MyCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1BF3DF242A2B47000AC67A /* MyCustomCell.swift */; };
 		3A1BF3E4242A6D5A000AC67A /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1BF3E3242A6D5A000AC67A /* TableViewController.swift */; };
-		3A3C58FE246073E4000223BA /* VideoPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3C58FD246073E4000223BA /* VideoPlayer.swift */; };
+		3A3C590624609112000223BA /* VideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3C590524609112000223BA /* VideoPlayer.m */; };
 		3A48FFC624374DF600FFECA5 /* HiddenTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A48FFC524374DF600FFECA5 /* HiddenTable.swift */; };
 		3A8E661824251D50007E2F51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8E661724251D50007E2F51 /* AppDelegate.swift */; };
 		3A8E661C24251D50007E2F51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8E661B24251D50007E2F51 /* ViewController.swift */; };
@@ -42,7 +42,8 @@
 		3A150D97242E1778001782B2 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		3A1BF3DF242A2B47000AC67A /* MyCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomCell.swift; sourceTree = "<group>"; };
 		3A1BF3E3242A6D5A000AC67A /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		3A3C58FD246073E4000223BA /* VideoPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayer.swift; sourceTree = "<group>"; };
+		3A3C590424609111000223BA /* Videojuegos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Videojuegos-Bridging-Header.h"; sourceTree = "<group>"; };
+		3A3C590524609112000223BA /* VideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoPlayer.m; sourceTree = "<group>"; };
 		3A48FFC524374DF600FFECA5 /* HiddenTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenTable.swift; sourceTree = "<group>"; };
 		3A8E661724251D50007E2F51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A8E661B24251D50007E2F51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -102,8 +103,9 @@
 		3A3C5900246085A1000223BA /* Multimedia */ = {
 			isa = PBXGroup;
 			children = (
+				3A3C590524609112000223BA /* VideoPlayer.m */,
+				3A3C590424609111000223BA /* Videojuegos-Bridging-Header.h */,
 				3AE4B43C2433787000361EDB /* Image.swift */,
-				3A3C58FD246073E4000223BA /* VideoPlayer.swift */,
 			);
 			name = Multimedia;
 			sourceTree = "<group>";
@@ -219,6 +221,7 @@
 				TargetAttributes = {
 					3A8E661324251D50007E2F51 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 				};
 			};
@@ -302,8 +305,8 @@
 			files = (
 				3A150D94242E1719001782B2 /* Platforms.swift in Sources */,
 				3A150D92242E16D7001782B2 /* Platform.swift in Sources */,
+				3A3C590624609112000223BA /* VideoPlayer.m in Sources */,
 				3A8E661C24251D50007E2F51 /* ViewController.swift in Sources */,
-				3A3C58FE246073E4000223BA /* VideoPlayer.swift in Sources */,
 				3A150D98242E1778001782B2 /* Store.swift in Sources */,
 				3A48FFC624374DF600FFECA5 /* HiddenTable.swift in Sources */,
 				3A8E661824251D50007E2F51 /* AppDelegate.swift in Sources */,
@@ -461,6 +464,7 @@
 			baseConfigurationReference = 29987C3CB53877621A8DC979 /* Pods-Videojuegos.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A5UCFNWB8C;
 				INFOPLIST_FILE = Videojuegos/Info.plist;
@@ -470,6 +474,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = es.upsa.mimo.GamerView;
 				PRODUCT_NAME = GamerView;
+				SWIFT_OBJC_BRIDGING_HEADER = "Videojuegos/Videojuegos-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -480,6 +486,7 @@
 			baseConfigurationReference = D2DC57279C50CBC6F74EEADE /* Pods-Videojuegos.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = A5UCFNWB8C;
 				INFOPLIST_FILE = Videojuegos/Info.plist;
@@ -489,6 +496,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = es.upsa.mimo.GamerView;
 				PRODUCT_NAME = GamerView;
+				SWIFT_OBJC_BRIDGING_HEADER = "Videojuegos/Videojuegos-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

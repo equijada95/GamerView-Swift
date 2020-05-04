@@ -201,7 +201,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             if videogames[indexPath.row].clip?.clip != nil {
                 urlVideo = videogames[indexPath.row].clip!.clip!
 
-                let playerViewController = player.playVideo(urlVideo: urlVideo)
+                let playerViewController = VideoPlayer.playVideo(urlVideo)!
                 
                 
                 self.present(playerViewController, animated: true, completion: nil)
