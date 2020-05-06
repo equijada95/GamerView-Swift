@@ -9,7 +9,7 @@
 import UIKit
 
 
-class HiddenTable: UIViewController, UITableViewDelegate, UITableViewDataSource
+class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource
 {
     
     var platforms: [Platforms] = []

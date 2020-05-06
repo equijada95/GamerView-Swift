@@ -12,7 +12,7 @@ import AVFoundation
 import AVKit
 import CoreData
 
-class TableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, YourCellDelegate
+class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, YourCellDelegate
 {
     
     var videogames : [Videogame] = []
@@ -141,13 +141,13 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let hTable = segue.destination as? HiddenTable
+        if let lVC = segue.destination as? ListViewController
         {
             if(platforms!.count > 0){
-                hTable.platforms = platforms!
+                lVC.platforms = platforms!
             }
             if(stores!.count > 0){
-                hTable.stores = stores!
+                lVC.stores = stores!
             }
         }
     }
@@ -189,61 +189,61 @@ class TableViewController: UIViewController, UITableViewDelegate, UITableViewDat
     {
         let videogameEntity = NSEntityDescription.entity(forEntityName: "VideogameFav",
             in: self.managedContext)!
-            let videogameFav = VideogameFav(entity: videogameEntity, insertInto: self.managedContext)
-            videogameFav.id = Int64(videogame.id)
-            videogameFav.name = videogame.name
-            videogameFav.image = videogame.image
-            videogameFav.rating = videogame.rating
-               videogameFav.date = Date()
-            if videogame.clip != nil{
-                let clipEntity = NSEntityDescription.entity(forEntityName: "ClipFav",
-                in: self.managedContext)!
-                let clip = ClipFav(entity: clipEntity, insertInto: self.managedContext)
-                clip.clip = videogame.clip!.clip
-                videogameFav.clip = clip
-               }
-        
-            if videogame.platforms != nil{
-                let platformEntity = NSEntityDescription.entity(forEntityName: "PlatformFav",
-                                                         in: self.managedContext)!
-                let platformsEntity = NSEntityDescription.entity(forEntityName: "PlatformsFav",
-                                                         in: self.managedContext)!
-                let mutablePlatforms = videogameFav.platforms?.mutableCopy() as! NSMutableSet
-                for i in videogame.platforms!
-                   {
-                    let platform = PlatformFav(entity: platformEntity, insertInto: self.managedContext)
-                       platform.name = i.platform.name
-                        platform.id = Int64(i.platform.id)
-                    let platforms = PlatformsFav(entity: platformsEntity, insertInto: self.managedContext)
-                       platforms.platform = platform
-                    
-                    mutablePlatforms.add(platforms)
-                    
-                    
-                   }
-                videogameFav.platforms = mutablePlatforms as NSSet
-                }
-            if videogame.stores != nil{
-                let storeEntity = NSEntityDescription.entity(forEntityName: "StoreFav",
-                                                         in: self.managedContext)!
-                let storesEntity = NSEntityDescription.entity(forEntityName: "StoresFav",
-                                                         in: self.managedContext)!
-                let mutableStores = videogameFav.stores?.mutableCopy() as! NSMutableSet
-                for i in videogame.stores!
-               {
-                let store = StoreFav(entity: storeEntity, insertInto: self.managedContext)
-                   store.name = i.store.name
-                    store.id = Int64(i.store.id)
-                let stores = StoresFav(entity: storesEntity, insertInto: self.managedContext)
-                   stores.store = store
-                
-                mutableStores.add(stores)
-                
-               }
-                videogameFav.stores = mutableStores as NSSet
+        let videogameFav = VideogameFav(entity: videogameEntity, insertInto:self.managedContext)
+        videogameFav.id = Int64(videogame.id)
+        videogameFav.name = videogame.name
+        videogameFav.image = videogame.image
+        videogameFav.rating = videogame.rating
+            videogameFav.date = Date()
+        if videogame.clip != nil{
+            let clipEntity = NSEntityDescription.entity(forEntityName: "ClipFav",
+            in: self.managedContext)!
+            let clip = ClipFav(entity: clipEntity, insertInto: self.managedContext)
+            clip.clip = videogame.clip!.clip
+            videogameFav.clip = clip
             }
-            self.coreDataStack.saveContext()
-            self.videogamesFav.append(videogameFav)
+    
+        if videogame.platforms != nil{
+            let platformEntity = NSEntityDescription.entity(forEntityName: "PlatformFav",
+                                                        in: self.managedContext)!
+            let platformsEntity = NSEntityDescription.entity(forEntityName: "PlatformsFav",
+                                                        in: self.managedContext)!
+            let mutablePlatforms = videogameFav.platforms?.mutableCopy() as! NSMutableSet
+            for i in videogame.platforms!
+                {
+                let platform = PlatformFav(entity: platformEntity, insertInto:self.managedContext)
+                    platform.name = i.platform.name
+                    platform.id = Int64(i.platform.id)
+                let platforms = PlatformsFav(entity: platformsEntity, insertInto:self.managedContext)
+                    platforms.platform = platform
+                
+                mutablePlatforms.add(platforms)
+                
+                
+                }
+            videogameFav.platforms = mutablePlatforms as NSSet
+            }
+        if videogame.stores != nil{
+            let storeEntity = NSEntityDescription.entity(forEntityName: "StoreFav",
+                                                        in: self.managedContext)!
+            let storesEntity = NSEntityDescription.entity(forEntityName: "StoresFav",
+                                                        in: self.managedContext)!
+            let mutableStores = videogameFav.stores?.mutableCopy() as! NSMutableSet
+            for i in videogame.stores!
+            {
+            let store = StoreFav(entity: storeEntity, insertInto: self.managedContext)
+                store.name = i.store.name
+                store.id = Int64(i.store.id)
+            let stores = StoresFav(entity: storesEntity, insertInto: self.managedContext)
+                stores.store = store
+            
+            mutableStores.add(stores)
+            
+            }
+            videogameFav.stores = mutableStores as NSSet
+        }
+        self.coreDataStack.saveContext()
+        self.videogamesFav.append(videogameFav)
     }
     
     // MARK: Videogame's Buttons

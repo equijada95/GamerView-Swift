@@ -13,11 +13,11 @@
 		3A150D96242E1768001782B2 /* Stores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A150D95242E1768001782B2 /* Stores.swift */; };
 		3A150D98242E1778001782B2 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A150D97242E1778001782B2 /* Store.swift */; };
 		3A1BF3E0242A2B47000AC67A /* MyCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1BF3DF242A2B47000AC67A /* MyCustomCell.swift */; };
-		3A1BF3E4242A6D5A000AC67A /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1BF3E3242A6D5A000AC67A /* TableViewController.swift */; };
+		3A1BF3E4242A6D5A000AC67A /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A1BF3E3242A6D5A000AC67A /* ResultsViewController.swift */; };
 		3A3C590624609112000223BA /* VideoPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A3C590524609112000223BA /* VideoPlayer.m */; };
-		3A48FFC624374DF600FFECA5 /* HiddenTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A48FFC524374DF600FFECA5 /* HiddenTable.swift */; };
+		3A48FFC624374DF600FFECA5 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A48FFC524374DF600FFECA5 /* ListViewController.swift */; };
 		3A8E661824251D50007E2F51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8E661724251D50007E2F51 /* AppDelegate.swift */; };
-		3A8E661C24251D50007E2F51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8E661B24251D50007E2F51 /* ViewController.swift */; };
+		3A8E661C24251D50007E2F51 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8E661B24251D50007E2F51 /* FavoritesViewController.swift */; };
 		3A8E661F24251D50007E2F51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8E661D24251D50007E2F51 /* Main.storyboard */; };
 		3A8E662124251D51007E2F51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8E662024251D51007E2F51 /* Assets.xcassets */; };
 		3A8E662424251D51007E2F51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8E662224251D51007E2F51 /* LaunchScreen.storyboard */; };
@@ -41,12 +41,12 @@
 		3A150D95242E1768001782B2 /* Stores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stores.swift; sourceTree = "<group>"; };
 		3A150D97242E1778001782B2 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		3A1BF3DF242A2B47000AC67A /* MyCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCustomCell.swift; sourceTree = "<group>"; };
-		3A1BF3E3242A6D5A000AC67A /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		3A1BF3E3242A6D5A000AC67A /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		3A3C590424609111000223BA /* Videojuegos-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Videojuegos-Bridging-Header.h"; sourceTree = "<group>"; };
 		3A3C590524609112000223BA /* VideoPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoPlayer.m; sourceTree = "<group>"; };
-		3A48FFC524374DF600FFECA5 /* HiddenTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HiddenTable.swift; sourceTree = "<group>"; };
+		3A48FFC524374DF600FFECA5 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		3A8E661724251D50007E2F51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3A8E661B24251D50007E2F51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3A8E661B24251D50007E2F51 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		3A8E661E24251D50007E2F51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A8E662024251D51007E2F51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A8E662324251D51007E2F51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -93,9 +93,9 @@
 		3A3C58FF24608572000223BA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				3A1BF3E3242A6D5A000AC67A /* TableViewController.swift */,
-				3A8E661B24251D50007E2F51 /* ViewController.swift */,
-				3A48FFC524374DF600FFECA5 /* HiddenTable.swift */,
+				3A1BF3E3242A6D5A000AC67A /* ResultsViewController.swift */,
+				3A8E661B24251D50007E2F51 /* FavoritesViewController.swift */,
+				3A48FFC524374DF600FFECA5 /* ListViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -306,9 +306,9 @@
 				3A150D94242E1719001782B2 /* Platforms.swift in Sources */,
 				3A150D92242E16D7001782B2 /* Platform.swift in Sources */,
 				3A3C590624609112000223BA /* VideoPlayer.m in Sources */,
-				3A8E661C24251D50007E2F51 /* ViewController.swift in Sources */,
+				3A8E661C24251D50007E2F51 /* FavoritesViewController.swift in Sources */,
 				3A150D98242E1778001782B2 /* Store.swift in Sources */,
-				3A48FFC624374DF600FFECA5 /* HiddenTable.swift in Sources */,
+				3A48FFC624374DF600FFECA5 /* ListViewController.swift in Sources */,
 				3A8E661824251D50007E2F51 /* AppDelegate.swift in Sources */,
 				3AD7789E244510F2002CC274 /* Clip.swift in Sources */,
 				3A12FB8C2453497200567F3E /* CoreDataStack.swift in Sources */,
@@ -318,7 +318,7 @@
 				3AFFCD0B242D2EB00000D478 /* Videogame.swift in Sources */,
 				3A1BF3E0242A2B47000AC67A /* MyCustomCell.swift in Sources */,
 				3A150D96242E1768001782B2 /* Stores.swift in Sources */,
-				3A1BF3E4242A6D5A000AC67A /* TableViewController.swift in Sources */,
+				3A1BF3E4242A6D5A000AC67A /* ResultsViewController.swift in Sources */,
 				3AFFCD09242D2E090000D478 /* Search.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -465,15 +465,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: MIMO. Master de Informatica Movil - Universidad Pontificia de Salamanca (A5UCFNWB8C)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = A5UCFNWB8C;
 				INFOPLIST_FILE = Videojuegos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				"OTHER_CODE_SIGN_FLAGS[sdk=*]" = "";
 				PRODUCT_BUNDLE_IDENTIFIER = es.upsa.mimo.GamerView;
 				PRODUCT_NAME = GamerView;
+				PROVISIONING_PROFILE_SPECIFIER = GamerView;
 				SWIFT_OBJC_BRIDGING_HEADER = "Videojuegos/Videojuegos-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -487,7 +491,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
+				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: MIMO. Master de Informatica Movil - Universidad Pontificia de Salamanca (A5UCFNWB8C)";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = A5UCFNWB8C;
 				INFOPLIST_FILE = Videojuegos/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -496,6 +502,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = es.upsa.mimo.GamerView;
 				PRODUCT_NAME = GamerView;
+				PROVISIONING_PROFILE_SPECIFIER = GamerView;
 				SWIFT_OBJC_BRIDGING_HEADER = "Videojuegos/Videojuegos-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

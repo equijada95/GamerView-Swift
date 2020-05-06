@@ -11,7 +11,7 @@ import CoreData
 import AVFoundation
 import AVKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, YourCellDelegate{
+class FavoritesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, YourCellDelegate{
     
     var apiRequest = ApiRequests()
     var items : [Videogame] = []
@@ -97,28 +97,28 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.count = search.count
             let items = search.results
             self.items = items
-            self.performSegue(withIdentifier: "push", sender: self)
+            self.performSegue(withIdentifier: "results", sender: self)
+        })
     }
-    )}
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let tVC = segue.destination as? TableViewController
+        if let rVC = segue.destination as? ResultsViewController
         {
-            tVC.videogames = self.items
-            tVC.apiRequest = self.apiRequest
-            tVC.nameSearch = self.name
-            tVC.numPage = self.page
-            tVC.numResults = self.count
-            tVC.coreDataStack = self.coreDataStack
+            rVC.videogames = self.items
+            rVC.apiRequest = self.apiRequest
+            rVC.nameSearch = self.name
+            rVC.numPage = self.page
+            rVC.numResults = self.count
+            rVC.coreDataStack = self.coreDataStack
             
         }
-        if let hTable = segue.destination as? HiddenTable
+        if let lVC = segue.destination as? ListViewController
         {
             if(platformsFav!.count > 0){
-                hTable.platformsFav = platformsFav!
+                lVC.platformsFav = platformsFav!
             }
             if(storesFav!.count > 0){
-                hTable.storesFav = storesFav!
+                lVC.storesFav = storesFav!
             }
         }
 
@@ -231,7 +231,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
 // MARK: UISearchBarDelegate
 
-extension ViewController: UISearchBarDelegate {
+extension FavoritesViewController: UISearchBarDelegate {
   func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
     guard let name = searchBar.text else { return }
     self.name = name
