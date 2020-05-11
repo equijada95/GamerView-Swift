@@ -68,7 +68,7 @@ class ResultsViewController: UIViewController, UITableViewDelegate, UITableViewD
 
     }
     
-    // MARK: Page Buttons
+    // MARK: Page's Buttons
     
     @IBAction func actionPage(_ sender: UIButton) {
         

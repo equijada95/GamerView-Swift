@@ -168,6 +168,8 @@ class FavoritesViewController: UIViewController, UITableViewDelegate, UITableVie
         self.present(alertview, animated: true, completion: nil)
     }
     
+    // MARK: Delete Favorite
+    
     func deleteFav(indexPath: IndexPath)
     {
         let videogame = self.videogames[indexPath.row]
